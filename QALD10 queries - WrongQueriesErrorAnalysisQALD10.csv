@@ -1,0 +1,1876 @@
+,targets,gpt3_generated_queries,targets result,gpt3 resilt,correct sintaxis,wrong query type,wrong query pattern,KG structure ignored,incomplete query,missed query,Angle brackets missed,incomplete triple,namespace mistake,hops target,hops generated,Errors sum
+0,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q16521.
+  ?v2 wdt:P31 wd:Q645883;
+    wdt:P710 ?v1, wd:Q625657.
+}","SELECT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q16521;
+    wdt:P710 wd:Q625657;
+    wdt:P31 wd:Q645883.
+}",wd:Q93208,-,1,,1,,,,,,,,,1
+1,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q11835640 wdt:P674 ?v1.
+  ?v1 wdt:P451 ?v2, ?v3.
+  FILTER((?v2 != ?v3) && (?v1 IN(wd:Q4205826, wd:Q4463198)))
+}","SELECT ?uri WHERE {
+  ?uri wdt:P451 wd:Q2492923, wd:Q11714225;
+    wdt:P674 wd:Q4205826.
+}",wd:Q4205826,-,1,,1,,,,,,,,,1
+2,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q860580 wdt:P112 ?v1.
+  ?v1 wdt:P39 wd:Q10891456.
+}","SELECT ?founder WHERE {
+  ?founder wdt:P112 wd:Q860580;
+    wdt:P39 wd:Q10891456.
+}",wd:Q1739008,-,1,,1,,,,,,,,,1
+3,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q696071 wdt:P50 ?v2.
+  ?v2 wdt:P800 ?v1.
+  ?v1 wdt:P921 wd:Q16003532.
+  FILTER(?v1 != wd:Q69071)
+}","SELECT ?v1 WHERE {
+  ?v1 wdt:P50 wd:Q696071;
+    wdt:P800 wd:Q16003532.
+}",wd:Q18225473,-,1,,1,,,,,,,,,1
+4,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q11835640 wdt:P50 ?v2.
+  ?v2 wdt:P800 ?v1.
+  FILTER(?v1 != wd:Q11835640)
+}","SELECT ?work WHERE { 
+  ?work wdt:P50 wd:Q312101 . 
+  FILTER (?work != wd:Q11835640)
+}","wd:Q2045474
+ wd:Q2414756
+ wd:Q4080260","http://www.wikidata.org/entity/Q969992
+http://www.wikidata.org/entity/Q2030044
+http://www.wikidata.org/entity/Q2038600
+http://www.wikidata.org/entity/Q2045474
+http://www.wikidata.org/entity/Q2414756
+http://www.wikidata.org/entity/Q2493587
+http://www.wikidata.org/entity/Q2652386
+http://www.wikidata.org/entity/Q2655197
+http://www.wikidata.org/entity/Q4042523
+http://www.wikidata.org/entity/Q4080260
+http://www.wikidata.org/entity/Q4113386
+http://www.wikidata.org/entity/Q4166737
+http://www.wikidata.org/entity/Q4240572
+http://www.wikidata.org/entity/Q4404361
+http://www.wikidata.org/entity/Q4517299
+http://www.wikidata.org/entity/Q9196510
+http://www.wikidata.org/entity/Q9196516
+http://www.wikidata.org/entity/Q9275822
+http://www.wikidata.org/entity/Q9284228
+http://www.wikidata.org/entity/Q9325932
+http://www.wikidata.org/entity/Q9361665
+http://www.wikidata.org/entity/Q9372652
+http://www.wikidata.org/entity/Q9372681
+http://www.wikidata.org/entity/Q9390914
+http://www.wikidata.org/entity/Q9396213
+http://www.wikidata.org/entity/Q11747958
+http://www.wikidata.org/entity/Q11751682
+http://www.wikidata.org/entity/Q11766714
+http://www.wikidata.org/entity/Q11779609
+http://www.wikidata.org/entity/Q11784264
+http://www.wikidata.org/entity/Q11787405
+http://www.wikidata.org/entity/Q11797006
+http://www.wikidata.org/entity/Q11797103
+http://www.wikidata.org/entity/Q11798735
+http://www.wikidata.org/entity/Q11800629
+http://www.wikidata.org/entity/Q11837732
+http://www.wikidata.org/entity/Q15260619
+http://www.wikidata.org/entity/Q18430829
+http://www.wikidata.org/entity/Q47500433
+http://www.wikidata.org/entity/Q48867300
+http://www.wikidata.org/entity/Q83974427
+http://www.wikidata.org/entity/Q110944981
+http://www.wikidata.org/entity/Q110944992
+http://www.wikidata.org/entity/Q110945037
+http://www.wikidata.org/entity/Q110945057
+http://www.wikidata.org/entity/Q110945072",1,,1,,,,,,,,,1
+5,"ASK {
+  wd:Q2926117 wdt:P19 ?v1.
+  wd:Q87192979 wdt:P19 ?v2.
+  ?v1 (wdt:P131*) ?v3.
+  ?v2 (wdt:P131*) ?v3.
+  ?v3 wdt:P31 wd:Q35657.
+}",SELECT ?state WHERE {    <http://www.wikidata.org/entity/Q2926117> <http://www.wikidata.org/prop/direct/P19> ?state .    <http://www.wikidata.org/entity/Q87192979> <http://www.wikidata.org/prop/direct/P19> ?state .    ?state <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/,true ,,FALSE,1,,,1,,,,,,,2
+6,"SELECT DISTINCT ?v1 WHERE 
+{ 
+  wd:Q231121 wdt:P69 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q231121 http://www.wikidata.org/prop/direct/P69 ?result },wd:Q749884,,FALSE,,,,,,1,,,,,1
+7,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q6711 wdt:P69 ?v1.
+  ?v1 wdt:P31 wd:Q9826.
+}","SELECT ?uri WHERE {
+  ?uri wdt:P31 wd:Q9826;
+    wdt:P69 wd:Q6711.
+}",wd:Q14705485,-,1,,1,,,,,,,,,1
+8,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q252 wdt:P36 ?v2.
+  ?v2 wdt:P706 ?v1.
+  ?v1 wdt:P31 wd:Q23442.
+}","SELECT ?uri WHERE {
+  ?uri wdt:P36 wd:Q3630;
+    wdt:P706 ?island.
+  ?island wdt:P31 wd:Q23442.
+}",wd:Q3757,-,1,,1,,,,,,,,,1
+9,"ASK
+{ 
+  wd:Q3208174 wdt:P400 wd:Q5014725. 
+}",SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P400> <http://www.wikidata.org/entity/Q5014725> ; <http://www.wikidata.org/entity/Q3208174> },true ,,FALSE,1,,,,,,1,,,,2
+10,"SELECT DISTINCT (COUNT(?v1) AS ?v2) WHERE {
+  wd:Q765165 p:P39 ?v3.
+  ?v3 ps:P39 wd:Q1048744;
+    pq:P580 ?v4.
+  ?v1 p:P39 ?v5.
+  ?v5 ps:P39 wd:Q1048744;
+    pq:P580 ?v6.
+  FILTER(?v6 < ?v4)
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri p:P39 ?statement.
+  ?statement ps:P39 wd:Q1048744;
+    pq:P580 ?date.
+  FILTER(?date < ""1964-10-14T00:00:00Z"")
+}",2,0,1,,,1,,,,,,,,1
+11,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 p:P39 ?v3.
+  ?v3 ps:P39 wd:Q218295;
+    pq:P580 ?v4.
+  FILTER((YEAR(?v4)) > 1990 )
+}","SELECT (COUNT(?pres) AS ?numPres) WHERE {
+  ?pres wdt:P39 wd:Q218295.
+  ?statement wdt:P580 ?date.
+  ?pres wdt:P39 ?statement.
+  FILTER(?date >= ""1990-01-01T00:00:00Z""^^xsd:dateTime)
+}",3,0,1,,,,,,,,,,,0
+12,"ASK {
+  wd:Q350568 p:P1344 ?v1.
+  ?v1 ps:P1344 ?v2.
+  ?v2 (wdt:P361*) wd:Q181278.
+  ?v1 pq:P1352 ?v3.
+  FILTER(?v3 <= 3 )
+}",@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Adam_Ondra> ns1:medalWinningCompetition <http://dbpedia.org/resource/2020_Summer_Olympics> .  SELECT ?uri WHERE {    ?uri <http://dbpedia.org/property/medalWinningCompetition> <http://dbpedia.org/resource/2020_Summer_Olympics> .    <http://dbpedia.org/resource/Adam_Ondra>,false ,,FALSE,1,,,1,,,,1,,,3
+13,"ASK {
+  {
+    SELECT (COUNT(?v1) AS ?v2) WHERE {
+      ?v1 wdt:P3450 wd:Q155223;
+        wdt:P1346 wd:Q128109.
+    }
+  }
+  FILTER(?v2 >= 2 )
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Chicago_Bulls> ns1:leagueChampion ?n .  SELECT DISTINCT ?n WHERE { <http://dbpedia.org/resource/Chicago_Bulls> <http://dbpedia.org/ontology/leagueChampion> ?n FILTER (?n >= 2) },true ,,FALSE,1,,,1,,,,1,,,3
+14,"ASK { 
+  wd:Q37922 wdt:P1346 wd:Q134798. 
+}",SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P1346> <http://www.wikidata.org/entity/Q134798> ; <http://www.wikidata.org/entity/Q37922> . },false ,,FALSE,1,,,,,,1,,,,2
+15,"ASK WHERE {
+  wd:Q25369 p:P54 ?v1.
+  ?v1 ps:P54 wd:Q121783;
+    pq:P582 ?v2.
+  wd:Q36159 p:P54 ?v3.
+  ?v3 ps:P54 wd:Q121783;
+    pq:P580 ?v4.
+  FILTER(?v2 = ?v4)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Kobe_Bryant> ns1:team <http://dbpedia.org/resource/Los_Angeles_Lakers> ; ns1:activeYearsEndYear 2016 .  <http://dbpedia.org/resource/LeBron_James> ns1:team <http://dbpedia.org/resource/Los_Angeles_Lakers> ; ns1:activeYearsStartYear 2018 .  SELECT ?endYear WHERE {,false ,,FALSE,1,,,1,,,,1,,,3
+16,"ASK WHERE {
+  wd:Q58815001 wdt:P57 ?v1.
+  wd:Q44578 wdt:P57 ?v1.
+  FILTER(wd:Q2745616 = ?v1)
+}",SELECT ?director WHERE { http://www.wikidata.org/entity/Q44578 http://www.wikidata.org/prop/direct/P57 ?director . http://www.wikidata.org/entity/Q58815001 http://www.wikidata.org/prop/direct/P57 ?director . },false ,,FALSE,1,,,,,1,,,,,2
+17,"ASK WHERE { 
+  wd:Q641 (p:P17/ps:P17) wd:Q131964. 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Venice> ns1:belongsTo ?uri .  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Venice> <http://dbpedia.org/ontology/belongsTo> ?uri . FILTER regex(?uri, ""Austrian Empire"") }",true ,,FALSE,1,1,,,,,,1,,,3
+18,"ASK {
+  wd:Q860580 wdt:P112 ?v1.
+  ?v1 wdt:P69 ?v2.
+  wd:Q860580 wdt:P112 ?v3.
+  ?v3 wdt:P69 ?v2.
+  FILTER(?v1 != ?v3)
+}",SELECT ?founder1 ?founder2 WHERE {    ?founder1 <http://www.wikidata.org/prop/direct/P112> <http://www.wikidata.org/entity/Q860580> .    ?founder2 <http://www.wikidata.org/prop/direct/P112> <http://www.wikidata.org/entity/Q860580> .    ?founder1 <http://www.wikidata.org/prop/direct/P69> ?university .,true ,,FALSE,1,,,1,,,,,,,2
+19,"ASK {
+  {
+    SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+      wd:Q2695156 wdt:P451 ?v1.
+      ?v1 wdt:P103 ?v3.
+      MINUS { ?v3 (wdt:P279*) wd:Q1860. }
+    }
+  }
+  FILTER(?v2 = 0 )
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Batman> ns1:partner ?uri .  ?uri ns1:nativeLanguage <http://dbpedia.org/resource/English_language> .  SELECT ?uri WHERE {    <http://dbpedia.org/resource/Batman> ns1:partner ?uri .    ?uri ns1:nativeLanguage <http://dbpedia.org/resource/English_language> . },false ,,FALSE,1,,,,,,,1,,,2
+20,"SELECT (AVG(?v1) AS ?v2) WHERE {
+  {
+    SELECT (COUNT(DISTINCT ?v3) AS ?v1) WHERE {
+      ?v4 wdt:P31 wd:Q6256;
+        (p:P35/ps:P35) ?v5.
+      OPTIONAL { ?v5 wdt:P26 ?v3. }
+    }
+    GROUP BY ?v5
+  }
+}",@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Head_of_state> a <http://dbpedia.org/ontology/OfficeHolder> ;     ns1:spouse ?spouse .  SELECT (AVG(?spouse) AS ?averageSpouses) WHERE {    ?headOfState a <http://dbpedia.org/ontology/OfficeHolder> ;                ns1:spouse ?spouse . },0.82527301092043681747,,FALSE,,1,,,,,,1,,,2
+21,"ASK {
+  wd:Q155810 wdt:P793 ?v1.
+  ?v1 wdt:P31 wd:Q108886259.
+}","SELECT ?event WHERE {
+  ?event wdt:P793 wd:Q7998;
+    wdt:P31 wd:Q108886259.
+}",true ,-,1,1,,,,,,,,,,1
+22,"SELECT ?v1 WHERE {
+  ?v1 wikibase:lexicalCategory wd:Q24905;
+    (dct:language/wdt:P218) ""tr"";
+    wikibase:lemma ?v2.
+  FILTER(REGEX(?v2, ""uş$""))
+}","SELECT ?v1 WHERE { ?v1 <http://wikiba.se/ontology#lemma> ?v2 . ?v2 bif:ends_with ""uş"" . ?v1 <http://wikiba.se/ontology#lexicalCategory> <http://www.wikidata.org/entity/Q24905> . }",wd:L30607,,FALSE,,1,,,,,,1,,,2
+23,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q21102 wdt:P495 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q21102 http://www.wikidata.org/prop/direct/P495 ?result },wd:Q145,,FALSE,,,,,,1,,,,,1
+24,"SELECT ?v1 WHERE {
+  ?v2 wdt:P166 wd:Q123737;
+    wdt:P27 ?v1.
+}
+GROUP BY ?v1
+ORDER BY DESC (COUNT(?v1))
+OFFSET 1
+LIMIT 1",SELECT ?country WHERE {    ?person <http://www.wikidata.org/prop/direct/P166> <http://www.wikidata.org/entity/Q123737> .    ?person <http://www.wikidata.org/prop/direct/P27> ?country .    {      SELECT (COUNT(?person) AS ?count) WHERE {        ?person <http://www.wikidata.org/prop/direct/P166> <http://www.wikidata.,wd:Q145,,FALSE,,1,,1,,,,,,,2
+25,"ASK { 
+  wd:Q3846 wdt:P281 ""32423"". 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Helloween> ns1:genre <http://dbpedia.org/resource/Heavy_metal_music> .  <http://dbpedia.org/resource/Heavy_metal_music> ns1:subgenre <http://dbpedia.org/resource/Rock_music> .  SELECT ?v1 WHERE { <http://dbpedia.org/resource/Helloween> ns1:genre ?v1 . ?v1 ns1,true ,,FALSE,1,,,1,,,,1,,,3
+26,"ASK { 
+  wd:Q3846 wdt:P281 ""32423"". 
+}","SELECT ?uri WHERE {
+  ?uri wdt:P281 ""32423"";
+    wd:Q3846 ?minden.
+}",true ,-,1,1,,1,,,,,,,,2
+27,"ASK {
+  wd:Q350568 p:P1344 ?v1.
+  ?v1 (ps:P1344/(wdt:P3450*)) wd:Q1774251.
+  { ?v1 pq:P1352 ?v2. }
+  UNION
+  { ?v1 pq:P166 ?v3. }
+  FILTER((?v2 = 1 ) || (SAMETERM(?v3, wd:Q406039)))
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Adam_Ondra> a ns1:Person ;      ns1:award <http://dbpedia.org/resource/IFSC_Climbing_World_Cup> .   SELECT ?award WHERE {    <http://dbpedia.org/resource/Adam_Ondra> <http://dbpedia.org/ontology/award> ?award .    ?award <http://www,false ,,FALSE,1,1,,1,,,,1,,,4
+28,"ASK {
+  wd:Q794 p:P2250 ?v1.
+  ?v1 pq:P585 ?v2;
+    ps:P2250 ?v3.
+  wd:Q794 p:P2250 ?v4.
+  ?v4 pq:P585 ?v5;
+    ps:P2250 ?v6.
+  FILTER((((YEAR(?v2)) = 1999 ) && ((YEAR(?v5)) > (YEAR(?v2)))) && (?v6 > ?v3))
+}",http://www.wikidata.org/entity/statement/Q794-C993A3A7-A3CF-45B3-A92B-E10E76811846 http://www.wikidata.org/prop/statement/P2250 70.8 . http://www.wikidata.org/entity/Q794 http://www.wikidata.org/prop/P2250 http://www.wikidata.org/entity/statement/Q794-1C0F6F56-8EC5-454E-99E4-,true ,,FALSE,1,,,,1,1,,,,,3
+29,"ASK {
+  wd:Q42053 p:P1082 ?v1.
+  ?v1 pq:P585 ?v2;
+    ps:P1082 ?v3.
+  wd:Q42053 p:P1082 ?v4.
+  ?v4 pq:P585 ?v5;
+    ps:P1082 ?v6.
+  FILTER((((YEAR(?v2)) = 2006 ) && ((YEAR(?v5)) > (YEAR(?v2)))) && (?v6 > ?v3))
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Isfahan> ns1:populationTotal ?population .  SELECT ?population WHERE {    <http://dbpedia.org/resource/Isfahan> <http://dbpedia.org/ontology/populationTotal> ?population .   FILTER (?population > 2006) },false ,,FALSE,1,,,,,,,1,,,2
+30,"ASK { 
+  wd:Q164815 wdt:P710 wd:Q190076. 
+}","SELECT ?JoeCocker WHERE {
+  wd:Q164815 wdt:P710 wd:Q190076.
+  ?JoeCocker wdt:P710 wd:Q190076.
+}",true ,"wd:Q164815
+ wd:Q10537330
+ wd:Q20107256
+ wd:Q99199366
+ wd:Q99321521
+ wd:Q99322137
+ wd:Q99341192",1,1,,1,,,,,,,,2
+31,"ASK { 
+  wd:Q66432 (wdt:P1344/wdt:P31) wd:Q33881. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Udo_Bölts> ns1:participantIn <http://dbpedia.org/resource/Tour_de_France> .  SELECT ?v1 WHERE { ?v1 <http://dbpedia.org/ontology/participantIn> <http://dbpedia.org/resource/Tour_de_France> .  FILTER (?v1 = <http://dbpedia.org/resource/Udo_Bö,true ,,FALSE,1,1,,1,,,,1,,,4
+32,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q189307 wdt:P3373 ?v1.
+  ?v1 wdt:P21 wd:Q6581097.
+  FILTER(NOT EXISTS { ?v1 wdt:P570 ?v3. })
+}","SELECT (COUNT(?brother) AS ?numBrothers) WHERE {
+  ?brother wdt:P21 wd:Q6581097.
+  wd:Q189307 wdt:P3373 ?brother.
+}",5,7,1,,1,,,,,,,,,1
+33,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q23434 wdt:P1196 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q23434 http://www.wikidata.org/prop/direct/P1196 ?result . },wd:Q10737,,FALSE,,,,,,1,,,,,1
+34,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q170022 (wdt:P1830/wdt:P452) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/House_of_Medici> ns1:industry ?v1 .  SELECT ?v1 WHERE { <http://dbpedia.org/resource/House_of_Medici> <http://dbpedia.org/ontology/industry> ?v1 },wd:Q837171,,FALSE,,1,,,,,,1,,,2
+35,"SELECT ?v1 WHERE { 
+  wd:Q4176 wdt:P2048 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q4176 http://www.wikidata.org/prop/direct/P2048 ?result },157,,FALSE,,,,,,1,,,,,1
+36,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q4186 rdfs:label ?v1.
+  FILTER(LANGMATCHES(LANG(?v1), ""zh-cn""))
+}","SELECT DISTINCT ?result WHERE { http://www.wikidata.org/entity/Q4186 <http://www.w3.org/2000/01/rdf-schema#label> ?result . FILTER(langMatches(lang(?result), ""zh"")) }",哈茨山,,FALSE,,,,,,1,,,,,1
+37,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q644371;
+    (wdt:P131*) wd:Q1055.
+}","SELECT (COUNT(?airport) AS ?count) WHERE {
+  ?airport wdt:P31 wd:Q644371;
+    wdt:P131 wd:Q1055.
+}",1,0,1,,1,,,,,,,,,1
+38,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q41076.
+}","SELECT (COUNT(?album) AS ?count) WHERE {    ?album wdt:P31 wd:Q482994 .    ?album wdt:P175 wd:Q41076 .    ?album wdt:P175 wd:Q769475, wd:Q846776, wd:Q18277464, wd:Q731601, wd:Q374724, wd:Q570912, wd:Q48774355, wd:Q388007, wd",39,,FALSE,,,,1,,,,,,,1
+39,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q25369 p:P166 ?v3.
+  ?v3 ps:P166 wd:Q1465181;
+    pq:P585 ?v1.
+}","SELECT (COUNT(?year) AS ?numYears) WHERE {    ?statement <http://www.wikidata.org/prop/statement/P166> <http://www.wikidata.org/entity/Q1465181> .    ?statement <http://www.wikidata.org/prop/qualifier/P585> ?year .    FILTER (?year >= ""2000-01-01T00:00:00Z""^^xsd:dateTime && ?year <= ""2011-01-01T00:",9,,FALSE,,1,,1,,,,,,,2
+40,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q25369 p:P166 ?v3.
+  ?v3 ps:P166 wd:Q674359;
+    pq:P585 ?v1.
+  wd:Q169452 p:P166 ?v4.
+  ?v4 ps:P166 wd:Q674359;
+    pq:P585 ?v1.
+}","SELECT (COUNT(?year) AS ?count) WHERE {
+  ?shaq wdt:P166 wd:Q674359;
+    pq:P585 ?year.
+  ?kobe wdt:P166 wd:Q674359;
+    pq:P585 ?year.
+  FILTER(?shaq != ?kobe)
+}",4,0,1,,1,1,,,,,,,,2
+41,"ASK {
+  wd:Q4963691 wdt:P108 ?v1;
+    wdt:P69 ?v1.
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q3918.
+}","SELECT ?university WHERE {
+  wd:Q4963691 wdt:P69 ?university;
+    wdt:P108 ?university.
+}",true ,wd:Q332498,1,,1,,,,,,,,,1
+42,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q312556 p:P26 ?v3.
+  ?v3 ps:P26 ?v4.
+  ?v1 wdt:P25 ?v4;
+    wdt:P22 wd:Q312556.
+  FILTER(EXISTS { ?v3 pq:P582 ?v5. })
+}",SELECT (COUNT(?child) AS ?numChildren) WHERE {    ?exWife <http://www.wikidata.org/prop/direct/P26> <http://www.wikidata.org/entity/Q312556> .    ?child <http://www.wikidata.org/prop/direct/P22> ?exWife .    ?child <http://www.wikidata.org/prop/direct/P25> <http://www.wikidata.org/entity/Q10322797,4,,FALSE,,,,1,,,,,,,1
+43,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q2599 p:P26 ?v3.
+  ?v3 ps:P26 ?v4.
+  ?v1 wdt:P25 ?v4;
+    wdt:P22 wd:Q2599.
+  FILTER((EXISTS { ?v3 pq:P582 ?v5. }) && (?v4 = wd:Q228899))
+}","SELECT (COUNT(?child) AS ?numChildren) WHERE {
+  ?exWife wdt:P26 wd:Q228899.
+  ?child wdt:P25 ?exWife;
+    wdt:P22 wd:Q2599.
+}",4,0,1,,1,1,,,,,,,,2
+44,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q1144286 wdt:P527 ?v1.
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q515.
+}","SELECT (COUNT(?uri) AS ?count) WHERE { 
+  ?uri wdt:P527 wd:Q1144286. 
+}",3,0,1,,1,1,,,,,,,,2
+45,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P112 wd:Q19837;
+    (wdt:P31/(wdt:P279*)) wd:Q4830453.
+}",SELECT (COUNT(?business) AS ?numBusinesses) WHERE {    ?business <http://www.wikidata.org/prop/direct/P112> <http://www.wikidata.org/entity/Q19837> .    { <http://www.wikidata.org/entity/Q312> <http://www.wikidata.org/prop/direct/P112> ?business }    UNION    { <http://www.wikidata.org/entity/Q308993> <http,2,,FALSE,,1,,1,,,,,,,2
+46,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q6256;
+    wdt:P8328 ?v3;
+    wdt:P1622 wd:Q13196750.
+  FILTER(?v3 > 7 )
+}",SELECT (COUNT(?country) AS ?count) WHERE {    ?country <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q6256> .    ?country <http://www.wikidata.org/prop/direct/P8328> ?democracyIndex .    ?country <http://www.wikidata.org/prop/direct/P1622> <http://www.wikidata.org/entity/Q13196750> .,12,,FALSE,,,,1,,,,,,,1
+47,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q6256.
+  FILTER(NOT EXISTS { ?v1 (p:P463/ps:P463) wd:Q1065. })
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri wdt:P31 wd:Q6256.
+  FILTER(NOT EXISTS { ?uri wdt:P1441 ?member. })
+}",37,210,1,,1,,,,,,,,,1
+48,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q6256;
+    wdt:P30 wd:Q18.
+}","SELECT (COUNT(?country) AS ?count) WHERE { 
+  ?country wdt:P30 wd:Q18. 
+}",12,578,1,,,1,,,,,,,,1
+49,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v3 (wdt:P31/(wdt:P279*)) wd:Q8502;
+    (p:P2044/psn:P2044/wikibase:quantityAmount) ?v4;
+    wdt:P17 ?v1.
+  FILTER(?v4 > 2000 )
+}","SELECT (COUNT(DISTINCT ?country) AS ?count) WHERE {
+  ?mountain wdt:P17 ?country;
+    wdt:P2044 ?elevation.
+  FILTER(?elevation > 2000 )
+}",134,176,1,,1,1,,,,,,,,2
+50,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q30170627;
+    wdt:P1441 wd:Q23572.
+}","SELECT (COUNT(?uri) AS ?count) WHERE { 
+  ?uri wdt:P1441 wd:Q23572. 
+}",5,174,1,,1,1,,,,,,,,2
+51,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q23572 wdt:P166 ?v1.
+  ?v1 (wdt:P361/wdt:P279) wd:Q123737.
+}","SELECT (COUNT(?award) AS ?count) WHERE {    <http://www.wikidata.org/entity/Q23572> <http://www.wikidata.org/prop/direct/P166> ?award .    FILTER (?award IN ( <http://www.wikidata.org/entity/Q7243505>, <http://www.wikidata.org/entity/Q7243513>, <http://www.wikidata.org/entity/Q989438>, <http",5,,FALSE,,,,1,,,,,,,1
+52,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q92582 wdt:P4969 ?v1.
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q11424.
+}","SELECT (COUNT(?film) AS ?count) WHERE { 
+  ?film wdt:P4969 wd:Q92582. 
+}",5,0,1,,1,1,,,,,,,,2
+53,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q9682 (p:P735/ps:P735) ?v1. 
+}","@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Elizabeth_II> a <http://dbpedia.org/class/yago/WikicatMonarchsOfTheUnitedKingdom> ;     ns1:givenName ""Elizabeth"" , ""Lilibet"" , ""Lillibet"" .   SELECT (COUNT(?givenName) AS ?count) WHERE { <http://dbpedia.org/resource/Elizabeth_II> <http://dbpedia.org/property/givenName>",3,,FALSE,,1,,1,,,,1,,,3
+54,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q1055 (p:P6/ps:P6) ?v1.
+  ?v1 wdt:P21 wd:Q6581072.
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Klaus_von_Dohnanyi> a ns1:Mayor ;     ns1:gender ""male"" .  <http://dbpedia.org/resource/Katharina_Fegebank> a ns1:Mayor ;     ns1:gender ""female"" .  <http://dbpedia.org/resource/Ole_von_Beust> a ns1:Mayor ;     ns1:gender ""male"" .",0,,FALSE,,1,,,1,,,1,,,3
+55,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q794 (p:P35/ps:P35) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Iran> ns1:headOfState ?uri .  SELECT (COUNT(?uri) AS ?count) WHERE { <http://dbpedia.org/resource/Iran> ns1:headOfState ?uri . },2,,FALSE,,1,,,,,,1,,,2
+56,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q11571 (wdt:P19/wdt:P1082) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Cristiano_Ronaldo> ns1:birthPlace ?uri .   SELECT (COUNT(?inhabitants) AS ?totalInhabitants) WHERE {    ?uri ns1:populationTotal ?inhabitants .    <http://dbpedia.org/resource/Cristiano_Ronaldo> ns1:birthPlace ?uri .  },111892,,FALSE,,1,,,,,,1,,,2
+57,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P166/wdt:P279) wd:Q7191;
+    wdt:P27 wd:Q17;
+    wdt:P106 wd:Q36180.
+}","SELECT (COUNT(?writer) AS ?count) WHERE {
+  ?writer wdt:P27 wd:Q17;
+    wdt:P106 wd:Q36180.
+}",3,2921,1,,1,1,,,,,,,,2
+58,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q668 wdt:P2936 ?v1. 
+}",SELECT (COUNT(?lan) AS ?count) WHERE {    http://www.wikidata.org/entity/Q668 http://www.wikidata.org/prop/direct/P2936 ?lan . },438,,FALSE,,,,,,1,,,,,1
+59,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q283 wdt:P462 ?v1. 
+}","SELECT ?color WHERE { 
+  wd:Q283 wdt:P462 ?color. 
+}",6,"wd:Q3133
+ wd:Q23444
+ wd:Q1396399
+ wd:Q5148636
+ wd:Q5960345
+ wd:Q17244894",1,,1,,,,,,,,,1
+60,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q153793 wdt:P937 ?v1. 
+}",SELECT DISTINCT ?loc WHERE { http://www.wikidata.org/entity/Q153793 http://www.wikidata.org/prop/direct/P937 ?loc },12,,FALSE,,,,,,1,,,,,1
+61,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q1311 p:P2922 ?v3.
+  ?v3 ps:P2922 ?v1;
+    (pq:P3005/wdt:P527) ?v4.
+  wd:Q183 (wdt:P361*) ?v4.
+}",SELECT ?v1 WHERE {    <http://www.wikidata.org/entity/Q183> <http://www.wikidata.org/prop/direct/P361> <http://www.wikidata.org/entity/Q1311> .    <http://www.wikidata.org/entity/Q1311> <http://www.wikidata.org/prop/P2922> ?v1 .    ?v1 <http://www.wikidata.org/prop/statement/P2922,3,,FALSE,,1,,1,,,,,,,2
+62,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q82464 wdt:P50 ?v3.
+  ?v1 wdt:P31 wd:Q7725634;
+    wdt:P50 ?v3.
+  FILTER(?v1 != wd:Q82464)
+}",SELECT (COUNT(?v1) AS ?count) WHERE { ?v1 <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q7725634> ; <http://www.wikidata.org/prop/direct/P50> <http://www.wikidata.org/entity/Q30875> ; <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q7725634,33,,FALSE,,,,1,,,,,,,1
+63,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q7725634;
+    wdt:P50 wd:Q7245.
+}","SELECT (COUNT(?work) AS ?worksWritten) WHERE {
+  ?work wdt:P50 wd:Q7245;
+    wdt:P31 wd:Q7725634.
+  wd:Q7245 wdt:P50 ?author.
+  ?author wdt:P31 wd:Q16385809.
+}",62,0,1,,,1,,,,,,,,1
+64,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q7245 wdt:P106 ?v1. 
+}",SELECT (COUNT(?occ) AS ?count) WHERE { http://www.wikidata.org/entity/Q7245 http://www.wikidata.org/prop/direct/P106 ?occ . },12,,FALSE,,,,,,1,,,,,1
+65,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P27 wd:Q145.
+  wd:Q79037 (p:P175/ps:P175) ?v1.
+}","SELECT (COUNT(?performer) AS ?count) WHERE {
+  ?performer wdt:P31 wd:Q2023710;
+    wdt:P27 wd:Q145.
+}",2,0,1,,1,1,,,,,,,,2
+66,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q30 (p:P37/ps:P37) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/United_States> ns1:officialLanguages <http://dbpedia.org/resource/English_language> .  <http://dbpedia.org/resource/United_States> ns1:officialLanguages <http://dbpedia.org/resource/Spanish_language> .   SELECT (COUNT(?uri) AS ?count) WHERE { ?uri <http://dbpedia.org/property/officialLanguages> <http://,3,,FALSE,,,,1,,,,1,,,2
+67,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q843 (p:P37/ps:P37) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Pakistan> a ns1:Country ;     ns1:officialLanguage ?lang .   SELECT (COUNT(?lang) AS ?count) WHERE { <http://dbpedia.org/resource/Pakistan> a ns1:Country ; ns1:officialLanguage ?lang . },2,,FALSE,,,,,,,,1,,,1
+68,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v3 wdt:P57 wd:Q55400;
+    wdt:P166 ?v1.
+  ?v1 wdt:P31 wd:Q19020.
+}","SELECT (COUNT(?movie) AS ?totalOscars) WHERE {
+  ?movie wdt:P166 wd:Q155653;
+    wdt:P31 wd:Q19020;
+    (wdt:P166/wdt:P57) ?award.
+  FILTER(?award = wd:Q55400)
+}",1,0,1,,1,1,,,,,,,,2
+69,"SELECT (COUNT(?movie) AS ?totalOscars) WHERE {
+  ?movie wdt:P166 wd:Q155653;
+    wdt:P31 wd:Q19020;
+    (wdt:P166/wdt:P57) ?award.
+  FILTER(?award = wd:Q55400)
+}","SELECT DISTINCT ?n WHERE {
+  wd:Q4584302 wdt:P157 ?n;
+    wdt:P31 wd:Q5.
+}",0,wd:Q201377,1,,1,1,,,,,,,,2
+70,"SELECT (MAX(?v1) AS ?v2) WHERE { 
+  wd:Q58715 (wdt:P1542/wdt:P1120) ?v1. 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Great_Leap_Forward> a ns1:Event ;      ns2:deaths ""45000000"" ;      ns2:highestEstimate ""45000000"" .  SELECT (SUM(?deaths) AS ?totalDeaths) WHERE {    ?event <http://www.w3.org/1999/02/22-",45000000,,FALSE,,,,1,,,,1,,,2
+71,"SELECT (SUM(?v1) AS ?v2) WHERE {
+  ?v3 wdt:P31 wd:Q515;
+    wdt:P206 wd:Q3392;
+    wdt:P1082 ?v1.
+}","SELECT DISTINCT ?n WHERE {
+  ?city wdt:P31 wd:Q515;
+    wdt:P206 wd:Q3392;
+    wdt:P1082 ?n.
+}",15948210,"5345000
+68656
+133772
+267913
+525953
+9606916",1,,1,,,,,,,,,1
+72,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q202021 wdt:P527 ?v1.
+  ?v1 wdt:P31 wd:Q1760309.
+}","SELECT (COUNT(?pitchClass) AS ?count) WHERE {
+  ?chromaticScale wdt:P527 ?pitchClass.
+  ?pitchClass wdt:P31 wd:Q1760309.
+}",21,1022,1,,,1,,,,,,,,1
+73,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q7725634;
+    wdt:P7937 wd:Q25379;
+    wdt:P50 wd:Q692;
+    wdt:P571 ?v3.
+  FILTER((YEAR(?v3)) < 1600 )
+}","http://www.wikidata.org/entity/Q232042 http://www.wikidata.org/prop/direct/P7937 http://www.wikidata.org/entity/Q25379 .  SELECT (COUNT(?play) AS ?plays) WHERE {    ?play wdt:P50 wd:Q692 ;         wdt:P31 wd:Q7725634 ;         wdt:P571 ?date .   FILTER (?date >= ""1596-01-01T00:00:00Z",21,,FALSE,,,,1,,1,,,,,2
+74,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q7725634;
+    wdt:P50 wd:Q6711;
+    (wdt:P136/(wdt:P279*)) wd:Q482.
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri wdt:P50 wd:Q6711;
+    wdt:P31 wd:Q7725634.
+}",3,11,1,,1,1,,,,,,,,2
+75,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q7278;
+    p:P1410 ?v3.
+  ?v3 pq:P194 wd:Q154797;
+    ps:P1410 ?v4.
+  FILTER(?v4 > 0 )
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri pq:P194 wd:Q154797;
+    ps:P1410 ?seats.
+}",8,10,1,,1,1,,,,,,,,2
+76,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q7191 wdt:P527 ?v1;
+    wdt:P112 wd:Q23810.
+}","SELECT (COUNT(?prize) AS ?count) WHERE {
+  ?prize wdt:P527 wd:Q7191.
+  wd:Q7191 wdt:P112 wd:Q23810.
+}",5,0,1,,,1,,,,,,,,1
+77,"ASK {
+  ?v1 wdt:P31 wd:Q2133344, wd:Q99654400;
+    wdt:P137 wd:Q193701.
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/SpaceX_CRS-7> a ns1:SpaceMission ;     ns1:launchOutcome <http://dbpedia.org/resource/Failed_launch> ;     ns1:operator <http://dbpedia.org/resource/SpaceX> .   SELECT ?mission WHERE { ?mission <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://db,false  ,,FALSE,1,,,1,,,,1,,,3
+78,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q5;
+    wdt:P1411 wd:Q44585.
+  FILTER(NOT EXISTS { ?v1 wdt:P166 wd:Q44585. })
+}","SELECT (COUNT(?person) AS ?count) WHERE {
+  ?person wdt:P31 wd:Q5;
+    wdt:P1411 wd:Q44585.
+  MINUS { ?person wdt:P166 ?nobelPrize. }
+}",359,76,1,,1,,,,,,,,,1
+79,"SELECT ?v1 WHERE { 
+  wd:Q30603704 wdt:P2437 ?v1. 
+}","SELECT (COUNT(?result) AS ?seasons) WHERE { 
+  wd:Q30603704 wdt:P2437 ?result. 
+}",3,1,1,,1,,,,,,,,,1
+80,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q523076 wdt:P50 ?v3.
+  ?v3 wdt:P3373 ?v1.
+}","SELECT (COUNT(?sibling) AS ?numSiblings) WHERE {
+  ?author wdt:P50 ?sibling.
+  FILTER(?author = wd:Q523076)
+}",3,1,1,,1,1,,,,,,,,2
+81,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q1621261 wdt:P1441 ?v1.
+  ?v1 wdt:P144 wd:Q79037.
+}",@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Venom_(comics)> a <http://dbpedia.org/class/yago/FictionalCharactersIntroducedIn1988> ;     ns1:basedOn <http://dbpedia.org/resource/Spider-Man> .  <http://dbpedia.org/resource/Venom_in_other_media> a <http://dbpedia.org/class/yago/WorksBasedOnSpider-Man> .   SELECT (,0,,FALSE,,,,1,,,,1,,,2
+82,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q158861 wdt:P26 ?v1. 
+}",SELECT (COUNT(?sp) AS ?numSpouses) WHERE { http://www.wikidata.org/entity/Q158861 http://www.wikidata.org/prop/direct/P26 ?sp . },68,,FALSE,,,,,,1,,,,,1
+83,"ASK {
+  wd:Q39 wdt:P1332 ?v1.
+  FILTER(?v1 > ""Point ( 8.57 47.8 ) ""^^geo:wktLiteral)
+}","SELECT ?loc WHERE {
+  wd:Q39 wdt:P1332 ?loc.
+  FILTER(?loc > ""8.57 47.8"")
+}",false  ,-,1,1,,,,,,,,,,1
+84,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q312674 p:P166 ?v1.
+  ?v1 (ps:P166/wdt:P31) wd:Q1011547.
+}","SELECT (COUNT(?statement) AS ?count) WHERE {
+  ?statement wdt:P166 wd:Q312674;
+    wdt:P31 wd:Q171299.
+}",4,0,1,,1,,,,,,,,,1
+85,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q25369 wdt:P1344 ?v1.
+  ?v1 (wdt:P31/wdt:P279) wd:Q5389.
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri wdt:P1344 wd:Q25369;
+    wdt:P31 wd:Q127288.
+}",2,0,1,,1,,,,,,,,,1
+86,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q110719 p:P39 ?v1.
+  ?v1 ps:P39 wd:Q18130478.
+}","SELECT (COUNT(?statement) AS ?count) WHERE {
+  ?statement p:P39 wd:Q18130478.
+  wd:Q110719 p:P39 ?statement.
+}",8,0,1,,,1,,,,,,,,1
+87,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q188712 wdt:P1344 ?v1.
+  ?v1 wdt:P31 wd:Q198.
+}",SELECT (COUNT(?war) AS ?count) WHERE {    ?empire <http://www.wikidata.org/prop/direct/P1344> ?war .    ?war <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q198> .    ?empire <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q188712> .,4,,FALSE,,,,1,,,,,,,1
+88,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q152778 wdt:P112 ?v1.
+  ?v1 wdt:P21 wd:Q6581072.
+}","@prefix ns1: <http://dbpedia.org/ontology/> . @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Die_Brücke> a ns1:Organisation ;     ns1:foundingYear ""1905"" ;     ns2:foundingMembers ""Ernst Ludwig Kirchner, Fritz Bleyl, Erich Heckel, Karl Schmidt-Rottluff, Max Pechstein, Otto Mueller, Emil Nolde, César Klein, Max Ernst, and",0,,FALSE,,,,,1,,,1,,,2
+89,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P4214 ?v2.
+  FILTER(?v1 IN(wd:Q174199, wd:Q36341))
+}
+ORDER BY DESC (?v2)
+LIMIT 1","SELECT ?animal ?lifespan WHERE {    { <http://www.wikidata.org/entity/Q174199> <http://www.wikidata.org/prop/direct/P4214> ?lifespan }    UNION    { <http://www.wikidata.org/entity/Q36341> <http://www.wikidata.org/prop/direct/P4214> ?lifespan }    BIND (IF(?lifespan = 51.6, ""Common Bottlenose Dolphin",wd:Q174199,,FALSE,,1,,1,,,,,,,2
+90,"SELECT ?v1 WHERE { 
+  wd:Q18032040 wdt:P31 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q18032040 http://www.wikidata.org/prop/direct/P31 ?result },wd:Q7187,,FALSE,,,,,,1,,,,,1
+91,"SELECT (COUNT(?v1) AS ?v2) WHERE {
+  wd:Q242643 (p:P166/ps:P166) ?v1.
+  FILTER(?v1 = wd:Q194285)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Naomi_Novik> ns1:award ""?uri"" .  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Naomi_Novik> <http://dbpedia.org/ontology/award> ?uri FILTER regex(?uri, ""Nebula Award"") }",1,,FALSE,,1,,,,,,1,,,2
+92,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q208156 wdt:P585 ?v1. 
+}","SELECT DISTINCT ?time WHERE { 
+  wd:Q208156 wdt:P585 ?time. 
+}",2,"1 January 1281
+1 January 1274",1,,1,,,,,,,,,1
+93,"SELECT (COUNT(?v1) AS ?v2) WHERE {
+  wd:Q242643 (p:P1411/ps:P1411) ?v1.
+  FILTER(?v1 = wd:Q188914)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Naomi_Novik> ns1:award ""?uri"" .  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Naomi_Novik> <http://dbpedia.org/ontology/award> ?uri . FILTER regex(?uri, ""Hugo Award"") }",1,,FALSE,,1,,,,,,1,,,2
+94,"ASK WHERE {
+  wd:Q623561 wdt:P138 ?v1;
+    wdt:P61 ?v2.
+  FILTER(?v2 = ?v1)
+}",SELECT (YEAR(?deathDate) - YEAR(?birthDate)) AS ?yearsLived WHERE {    ?entity wdt:P31 wd:Q144 .    ?entity wdt:P569 ?birthDate .    ?entity wdt:P570 ?deathDate .    FILTER (?deathDate > ?birthDate)    FILTER NOT EXISTS {      ?otherEntity wdt:P31 wd:Q144 .      ?otherEntity wdt:P569 ?otherBirthDate .,30,,FALSE,1,,,1,,,,,,,2
+95,"ASK {
+  wd:Q15862 wdt:P2031 ?v1.
+  FILTER((YEAR(?v1)) <= 1969 )
+}","SELECT ?start WHERE {
+  ?start wdt:P2031 1969 .
+  FILTER(EXISTS { wd:Q15862 wdt:P2031 ?start. })
+}",false ,-,1,,1,,,,,,,,,1
+96,"ASK {
+  wd:Q623561 wdt:P138 ?v1;
+    wdt:P61 ?v2.
+  FILTER(?v2 = ?v1)
+}","SELECT ?inv WHERE {
+  wd:Q623561 wdt:P61 ?inv;
+    wdt:P138 ""Dr. Pepper"".
+}",false ,,FALSE,1,1,,,,,,,,,2
+97,"SELECT ?v1 WHERE {
+  wd:Q92580 wdt:P495 ?v2.
+  ?v2 wdt:P35 ?v1.
+}","SELECT ?head WHERE {
+  ?country wdt:P495 wd:Q92580;
+    wdt:P35 ?head.
+  FILTER(NOT EXISTS { ?head wdt:P576 _:b1. })
+}",wd:Q217096,-,1,,1,,,,,,,,,1
+98,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q68061 (wdt:P740/(wdt:P131*)) ?v3.
+  ?v3 wdt:P31 wd:Q35657;
+    wdt:P206 ?v1.
+  ?v1 wdt:P31 wd:Q4022.
+}","SELECT (COUNT(?river) AS ?numRivers) WHERE {
+  ?state wdt:P31 wd:Q35657;
+    wdt:P206 wd:Q859238.
+  ?river wdt:P31 wd:Q4022;
+    wdt:P206 ?state.
+}",2,0,1,,1,,,,,,,,,1
+99,"SELECT ?v1 WHERE {
+  wd:Q608350 wdt:P159 ?v2.
+  ?v2 (wdt:P131*) ?v1.
+  ?v1 wdt:P31 wd:Q1221156.
+}","SELECT ?uri WHERE {
+  ?uri wdt:P159 wd:Q608350;
+    wdt:P131 wd:Q1198.
+}",wd:Q1198,-,1,,1,1,,,,,,,,2
+100,"SELECT ?v1 WHERE { 
+  wd:Q213417 wdt:P115 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q213417 http://www.wikidata.org/prop/direct/P115 ?result },wd:Q753529,,FALSE,,,,,,1,,,,,1
+101,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q1769361 wdt:P527 ?v1.
+  ?v1 (p:P31/ps:P31) wd:Q6256.
+}","SELECT (COUNT(?country) AS ?count) WHERE {
+  ?company wdt:P527 ?country.
+  FILTER(?company = wd:Q1769361)
+}",55,58,1,,1,,,,,,,,,1
+102,"SELECT ?v1 WHERE {
+  wd:Q1771942 (wdt:P159/(wdt:P131*)) ?v1.
+  ?v1 wdt:P31 wd:Q6256.
+}","SELECT ?v1 WHERE { 
+  wd:Q30 wdt:P159 ?v1. 
+}",wd:Q30,-,1,,1,1,,,,,,,,2
+103,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q3233785 wdt:P17 ?v1. 
+}","SELECT (COUNT(?c) AS ?count) WHERE { 
+  ?c wdt:P17 wd:Q3233785. 
+}",15,0,1,,,1,,,,,,,,1
+104,"SELECT ?v1 WHERE {
+  wd:Q1128775 wdt:P175 wd:Q1744;
+    wdt:P138 ?v1.
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1128775 http://www.wikidata.org/prop/direct/P138 ?result . http://www.wikidata.org/entity/Q1128775 http://www.wikidata.org/prop/direct/P175 http://www.wikidata.org/entity/Q1744 . },wd:Q1112128,,FALSE,,,,,,1,,,,,1
+105,"SELECT ?v1 WHERE {
+  wd:Q30 wdt:P1813 ?v2.
+  BIND(LANG(?v2) AS ?v1)
+}
+ORDER BY (STRLEN(?v2))
+LIMIT 1",SELECT ?name WHERE { http://www.wikidata.org/entity/Q30 http://www.wikidata.org/prop/direct/P1813 ?name . } ORDER BY LEN(?name) ASC LIMIT 1,en,,FALSE,,1,,,,1,,,,,2
+106,"ASK {
+  wd:Q2706 wdt:P473 ?v1.
+  FILTER(REGEX(?v1, ""^4""))
+}","SELECT ?code WHERE {
+  wd:Q2706 wdt:P473 ?code.
+  FILTER(STRSTARTS(?code, ""4""))
+}",false ,-,1,1,1,,,,,,,,,2
+107,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q11424;
+    wdt:P161 wd:Q37175.
+}","SELECT (COUNT(?movie) AS ?count) WHERE { 
+  ?movie wdt:P161 wd:Q37175. 
+}",75,87,1,,,1,,,,,,,,1
+108,"SELECT ?v1 WHERE {
+  wd:Q338553 wdt:P577 ?v2.
+  BIND(YEAR(?v2) AS ?v1)
+}","SELECT ?date WHERE { 
+  wd:Q338553 wdt:P577 ?date. 
+}",1981,30 November 1981,1,,1,,,,,,,,,1
+109,"SELECT ?v1 WHERE {
+  wd:Q98476957 (wdt:P50/wdt:P569) ?v2.
+  BIND(YEAR(?v2) AS ?v1)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Brit_Bennett> a ns1:Writer ;      ns2:birthDate ""1990-03-02""^^xsd:date .  SELECT ?birthDate WHERE {    ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ont",1990,,FALSE,,1,,1,,,,1,,,3
+110,"ASK WHERE { 
+  wd:Q125054 (wdt:P527/wdt:P17) wd:Q38. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Aldi> a ns1:Company ;     ns1:location <http://dbpedia.org/resource/Germany> .   SELECT ?uri WHERE { <http://dbpedia.org/resource/Aldi> <http://dbpedia.org/ontology/location> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://,true ,,FALSE,1,,,1,,,,1,,,3
+111,"ASK WHERE { 
+  wd:Q42053 wdt:P31 wd:Q1549591. 
+}","SELECT ?uri WHERE {
+  wd:Q42053 wdt:P31 ?uri.
+  ?uri wdt:P31 wd:Q1549591.
+}",true ,-,1,1,,,,,,,,,,1
+112,"ASK WHERE {
+  wd:Q395 ?v1 _:b3.
+  _:b3 ?v2 wd:Q336.
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Mathematics> a ns1:Discipline ;     ns1:relatedTo <http://dbpedia.org/resource/Science> .   SELECT ?uri WHERE { <http://dbpedia.org/resource/Mathematics> <http://dbpedia.org/ontology/relatedTo> ?uri . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,true ,,FALSE,1,,,1,,,,1,,,3
+113,"ASK WHERE { 
+  wd:Q28865 (p:P31/ps:P31) wd:Q9143. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Python_(programming_language)> ns1:subclassOf ?uri .  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Python_(programming_language)> <http://dbpedia.org/ontology/subclassOf> ?uri },true ,,FALSE,1,1,,,,,,1,,,3
+114,"SELECT ?v1 WHERE {
+  wd:Q143276 (wdt:P31/(wdt:P279*)) ?v1.
+  FILTER(?v1 IN(wd:Q104640197, wd:Q1213562))
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Samurai_Champloo> a ns1:Work ;     ns1:adaptationOf ?uri .  SELECT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Work> ; <http://dbpedia.org/ontology/adaptationOf> <http://dbpedia.org/resource/,wd:Q104640197,,FALSE,,1,,1,,,,1,,,3
+115,"ASK {
+  {
+    SELECT ?v1 WHERE {
+      wd:Q183 p:P6 ?v2.
+      ?v2 ps:P6 ?v1;
+        pq:P580 ?v3.
+      ?v1 wdt:P21 wd:Q6581072.
+    }
+    ORDER BY (?v3)
+    LIMIT 1
+  }
+  FILTER(EXISTS { ?v1 (p:P26/ps:P26) ?v4. })
+}","SELECT ?uri WHERE {
+  ?uri wdt:P21 wd:Q567;
+    wdt:P26 ?marriage.
+}",true ,-,1,1,1,1,,,,,,,,3
+116,"ASK WHERE {
+  wd:Q510 wdt:P2044 ?v1.
+  wd:Q513 wdt:P2044 ?v2.
+  FILTER((?v1 + ?v2) < 0 )
+}","SELECT ?h ?d WHERE {
+  wd:Q513 wdt:P2044 ?h.
+  wd:Q510 wdt:P2044 ?d.
+  FILTER(?h > ?d)
+}",true ,"h                   d
+8848.86        -10984",1,1,,,,,,,,,,1
+117,"ASK WHERE {
+  {
+    SELECT (COUNT(DISTINCT ?v1) AS ?v2) (COUNT(DISTINCT ?v3) AS ?v4) WHERE {
+      ?v3 (p:P31/ps:P31) wd:Q6256;
+        wdt:P30 wd:Q46.
+      ?v1 (p:P31/ps:P31) wd:Q6256;
+        wdt:P30 wd:Q48.
+    }
+  }
+  FILTER(?v4 > ?v2)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Europe> ns1:numberOfCountries ?n1 .  <http://dbpedia.org/resource/Asia> ns1:numberOfCountries ?n2 .  SELECT DISTINCT ?n1 ?n2 WHERE { <http://dbpedia.org/resource/Europe> <http://dbpedia.org/ontology/numberOfCountries> ?n1 .  <http://dbpedia.org/resource/Asia,true ,,FALSE,1,1,,1,,,,1,,,4
+118,"ASK WHERE {
+  wd:Q696071 wdt:P674 ?v1.
+  ?v1 wdt:P21 wd:Q6581072.
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Hunter_x_Hunter> ns1:mainCharacter <http://dbpedia.org/resource/Gon_Freecss> ;                                                ns1:mainCharacter <http://dbpedia.org/resource/Killua_Zoldyck> .  SELECT ?uri WHERE { ?uri <http://dbpedia.org/ontology/mainCharacter> <http://dbpedia.org/resource/Hunter_x_Hunter> ; <,false ,,FALSE,1,,,1,,,,1,,,3
+119,"ASK WHERE { 
+  wd:Q283 wdt:P462 wd:Q11567495. 
+}","SELECT ?uri WHERE { 
+  ?uri wdt:P462 wd:Q11567495. 
+}",false ,"wd:Q61457
+ wd:Q411430
+ wd:Q2235552
+ wd:Q3621429
+ wd:Q4023579
+ wd:Q17064584
+ wd:Q19833354
+ wd:Q19841454
+ wd:Q20963640
+ wd:Q29053744
+ wd:Q111549441",1,1,,,,,,,,,,1
+120,"ASK WHERE { 
+  wd:Q11885 wdt:P463 wd:Q11895. 
+}","SELECT ?uri WHERE {
+  ?uri wdt:P463 wd:Q11895.
+  FILTER(?uri = wd:Q11885)
+}",true ,wd:Q11885,1,1,,,,,,,,,,1
+121,"ASK WHERE {
+  wd:Q794 (wdt:P36/wdt:P2046) ?v1.
+  wd:Q183 (wdt:P36/wdt:P2046) ?v2.
+  FILTER(?v1 > ?v2)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Iran> a ns1:Country ;     ns1:capital <http://dbpedia.org/resource/Tehran> .   <http://dbpedia.org/resource/Germany> a ns1:Country ;     ns1:capital <http://dbpedia.org/resource/Berlin> .  SELECT ?tehran ?berlin WHERE {    ?iran ns1:capital ?tehran .    ?germany ns,false ,,FALSE,1,1,,1,,,,1,,,4
+122,"ASK WHERE {
+  wd:Q1650 (p:P2043/psn:P2043/wikibase:quantityAmount) ?v1.
+  wd:Q584 (p:P2043/psn:P2043/wikibase:quantityAmount) ?v2.
+  FILTER(?v1 > ?v2)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Weser> ns1:length ?weserLength .  <http://dbpedia.org/resource/Rhine> ns1:length ?rhineLength .   SELECT ?weserLength ?rhineLength WHERE { <http://dbpedia.org/resource/Weser> <http://dbpedia.org/ontology/length> ?weserLength ; <http://dbpedia.org/resource/Rh,false ,,FALSE,1,1,,1,,,,1,,,4
+123,"ASK WHERE {
+  wd:Q9545 (p:P2048/psn:P2048/wikibase:quantityAmount) ?v1.
+  wd:Q10993 (p:P2048/psn:P2048/wikibase:quantityAmount) ?v2.
+  FILTER(?v1 > ?v2)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Tony_Blair> a ns1:Person ;      ns2:height ""185"" .  <http://dbpedia.org/resource/Tiger_Woods> a ns1:Person ;      ns2:height ""188"" .  SELECT ?height1 ?height2 WHERE {    ?person1 ns2:height ?height",false ,,FALSE,1,1,,1,,,,1,,,4
+124,"ASK WHERE { 
+  wd:Q1297 wdt:P206 wd:Q1169. 
+}","SELECT ?location WHERE {
+  wd:Q1297 wdt:P206 ?location.
+  FILTER(?location = wd:Q1169)
+}",true ,wd:Q1169,1,1,,,,,,,,,,1
+125,"ASK WHERE { 
+  wd:Q6228 wdt:P47 wd:Q6224. 
+}","SELECT ?district WHERE {
+  wd:Q6228 wdt:P47 ?district.
+  FILTER(?district = wd:Q6224)
+}",true ,wd:Q6224,1,1,,,,,,,,,,1
+126,"ASK WHERE { 
+  wd:Q4186 wdt:P131 wd:Q7858. 
+}","SELECT ?harz WHERE {
+  ?harz wdt:P131 wd:Q7858;
+    wdt:P31 wd:Q4186.
+}",true ,-,1,1,,,,,,,,,,1
+127,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 wdt:P31 wd:Q5;
+    p:P166 ?v3.
+  { ?v3 ps:P166 wd:Q37922. }
+  UNION
+  { ?v3 ps:P166 wd:Q38104. }
+  ?v3 pq:P585 ?v4.
+  FILTER((YEAR(?v4)) > 2000 )
+}","http://www.wikidata.org/entity/Q323320 http://www.wikidata.org/prop/direct/P31 http://www.wikidata.org/entity/Q5 .  SELECT (COUNT(?person) AS ?count) WHERE {    ?person wdt:P166/wdt:P585 ?date FILTER (?date >= ""2000-01-01T00:00:00Z""^^xsd:dateTime)    {      ?person wdt:P166 wd:Q37922",82,,FALSE,,1,,1,,1,,,,,3
+128,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q408 wdt:P47 ?v1.
+  ?v1 (p:P31/ps:P31) wd:Q6256.
+}","SELECT (COUNT(?country) AS ?count) WHERE { 
+  ?country wdt:P47 wd:Q408. 
+}",4,6,1,,1,1,,,,,,,,2
+129,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q71719 wdt:P1619 ?v2.
+  BIND(YEAR(?v2) AS ?v1)
+}","SELECT DISTINCT ?year WHERE { 
+  wd:Q71719 wdt:P1619 ?year. 
+}",1960,1 January 1960,1,,1,,,,,,,,,1
+130,"ASK WHERE { 
+  wd:Q858851 (p:P2002/pq:P1552) wd:Q28378282. 
+}",@prefix ns1: <http://www.w3.org/ns/org#> .  @prefix ns2: <http://xmlns.com/foaf/0.1/> .  <http://dbpedia.org/resource/Linux_Foundation> ns1:hasPrimarySource <https://twitter.com/linuxfoundation> ;      ns2:verified true .   SELECT ?verified WHERE { <http://dbpedia.org/resource/Linux_Foundation> <http://xmlns.com/foaf/0.1/verified,true ,,FALSE,1,,,1,,,,1,,,3
+131,"ASK WHERE {
+  wd:Q567 wdt:P569 ?v1.
+  wd:Q9545 wdt:P569 ?v2.
+  FILTER((YEAR(?v2)) = (YEAR(?v1)))
+}","SELECT ?dt ?da WHERE {
+  wd:Q9545 wdt:P569 ?dt.
+  wd:Q567 wdt:P569 ?da.
+  FILTER(?dt = ?da)
+}",false ,-,1,1,,,,,,,,,,1
+132,"ASK WHERE {
+  wd:Q5287 wdt:P1098 ?v1.
+  FILTER(?v1 > 100000000 )
+}",SELECT ?num WHERE { http://www.wikidata.org/entity/Q5287 http://www.wikidata.org/prop/direct/P1098 ?num . FILTER (?num > 100000000) },true ,,FALSE,1,,,,,1,,,,,2
+133,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q238819;
+    wdt:P577 ?v2.
+}
+ORDER BY (?v2)
+LIMIT 1","SELECT ?album WHERE {
+  ?album wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q238819;
+    wdt:P577 ?releaseDate.
+  FILTER(?releaseDate = ""2005-01-01T00:00:00Z"")
+}",wd:Q221115,-,1,,1,,,,,,,,,1
+134,"ASK WHERE {
+  wd:Q696928 wdt:P57 ?v1.
+  wd:Q951002 wdt:P57 ?v2.
+  FILTER(?v1 != ?v2)
+}","SELECT ?dir ?dir2 WHERE {
+  wd:Q696928 wdt:P57 ?dir.
+  wd:Q951002 wdt:P57 ?dir2.
+  FILTER(?dir != ?dir2)
+}",false ,-,1,1,,,,,,,,,,1
+135,"ASK WHERE { 
+  wd:Q95 wdt:P112 wd:Q5284. 
+}",SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P112> <http://www.wikidata.org/entity/Q5284> . ?uri <http://www.wikidata.org/entity/Q95> },false ,,FALSE,1,,,,,,1,,,,2
+136,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 wdt:P31 wd:Q19793459;
+    wdt:P361 wd:Q8216;
+    wdt:P156 ?v1.
+  FILTER(NOT EXISTS { ?v2 wdt:P155 ?v3. })
+}","SELECT ?letter WHERE {
+  ?letter wdt:P361 wd:Q8216;
+    wdt:P31 wd:Q19793459.
+}
+ORDER BY (?letter)
+OFFSET 1
+LIMIT 1",wd:Q14382,wd:Q25389226,1,,1,1,,,,,,,,2
+137,"ASK {
+  wd:Q25369 p:P54 ?v1.
+  ?v1 ps:P54 ?v2;
+    pq:P580 ?v3;
+    pq:P582 ?v4.
+  wd:Q169452 p:P54 ?v5.
+  ?v5 ps:P54 ?v2;
+    pq:P580 ?v6;
+    pq:P582 ?v7.
+  FILTER(((((YEAR(?v3)) <= 2000 ) && 
+           ((YEAR(?v4)) >= 2000 )) && 
+          ((YEAR(?v6)) <= 2000 )) && 
+         ((YEAR(?v7)) >= 2000 ))
+}","SELECT ?uri WHERE {    ?uri <http://www.wikidata.org/prop/P54> <http://www.wikidata.org/entity/Q121783> .    ?uri <http://www.wikidata.org/prop/qualifier/P580> ?date .    FILTER (?date >= ""2000-01-01T00:00:00Z""^^xsd:dateTime && ?date <= ""2000-12-31T00:00:00Z""^^xsd:dateTime)",true ,,FALSE,1,,,1,,,,,,,2
+138,"ASK WHERE { 
+  wd:Q169452 wdt:P106 wd:Q3665646, wd:Q10800557. 
+}","SELECT ?v1 WHERE {
+  wd:Q169452 wdt:P106 ?v1.
+  FILTER((?v1 = wd:Q3665646) || (?v1 = wd:Q10800557))
+}",true ,"wd:Q3665646
+ wd:Q10800557",1,1,,,,,,,,,,1
+139,"ASK {
+  ?v1 wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q16954319;
+    wdt:P577 ?v2.
+  FILTER((NOT EXISTS {
+    ?v3 wdt:P31 wd:Q482994;
+      wdt:P175 wd:Q16954319;
+      wdt:P577 ?v4.
+    FILTER(?v4 < ?v2)
+  }) && ((YEAR(?v2)) = 2012 ))
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Darkside_(band)> ns1:activeYearsStartYear ""2012"" ;     ns1:firstAlbum <http://dbpedia.org/resource/Psychic> .   SELECT ?uri WHERE { ?uri <http://dbpedia.org/ontology/activeYearsStartYear> ""2012"" ; <http://dbpedia.org/ontology/firstAlbum> <http://dbpedia.org/resource/Psychic>",false ,,FALSE,1,,,1,,,,1,,,3
+140,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q4022.
+  wd:Q118841 wdt:P206 ?v1.
+}","SELECT ?v1 WHERE {
+  ?v1 wdt:P206 wd:Q1265.
+  wd:Q1265 wdt:P31 wd:Q4022.
+}",wd:Q1265,"wd:Q816
+ wd:Q829
+ wd:Q1261
+.........",1,,,1,,,,,,,,1
+141,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 wdt:P31 wd:Q1006079;
+    wdt:P361 wd:Q629029;
+    wdt:P1001 wd:Q183;
+    wdt:P467 ?v1.
+}",SELECT ?v1 WHERE { ?v1 <http://www.wikidata.org/prop/direct/P467> <http://www.wikidata.org/entity/Q30542760> ; <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q1006079> ; <http://www.wikidata.org/prop/direct/P361> <http://www.wikidata.org/entity/Q629029> ; <http://www.,wd:Q30542760,,FALSE,,,,1,,,,,,,1
+142,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 wdt:P31 wd:Q11862829;
+    rdfs:label ?v1.
+  FILTER((LANGMATCHES(LANG(?v1), ""de"")) && (REGEX(?v1, ""linguistik"")))
+}","SELECT ?label WHERE {
+  ?discipline rdfs:label ?label;
+    wdt:P31 wd:Q11862829.
+  FILTER(REGEX(?label, ""linguistik"", ""i""))
+  FILTER((LANG(?label)) = ""de"")
+}","Soziolinguistik
+Soziolinguistik
+Genderlinguistik
+Rechtslinguistik
+Interlinguistik
+Ethnolinguistik
+Ethnolinguistik
+Patholinguistik","anthropologische Linguistik
+historische Linguistik
+angewandte Linguistik
+Soziolinguistik
+Genderlinguistik
+deskriptive Linguistik
+Rechtslinguistik
+Ethnolinguistik
+Interlinguistik
+Allgemeine Linguistik
+Patholinguistik
+evolutionäre Linguistik",1,,1,,,,,,,,,1
+143,"SELECT ?v1 WHERE {
+  { wd:Q183 wdt:P35 ?v1. }
+  UNION
+  { wd:Q142 wdt:P35 ?v1. }
+}","SELECT ?result WHERE {
+  wd:Q142 wdt:P35 ?result.
+  wd:Q183 wdt:P35 ?result.
+}","wd:Q76658
+ wd:Q3052772",-,1,,1,,,,,,,,,1
+144,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 wdt:P22 wd:Q1203;
+    wdt:P31 wd:Q5;
+    wdt:P106 ?v1.
+}",http://www.wikidata.org/entity/Q311238 http://www.wikidata.org/prop/direct/P106 http://www.wikidata.org/entity/Q55960555  SELECT ?profession WHERE { ?person wdt:P22 wd:Q1203 ; wdt:P31 wd:Q5 ; wdt:P106 ?profession . },"wd:Q177220
+ wd:Q486748
+ wd:Q488205
+ wd:Q639669
+ wd:Q855091
+ wd:Q55960555
+ wd:Q28389
+ wd:Q33231
+ wd:Q33999
+ wd:Q36834
+ wd:Q49757",,FALSE,,,,1,,1,,1,,,3
+145,"SELECT DISTINCT ?v1 WHERE {
+  BIND(IF(EXISTS {
+    wd:Q201358 wdt:P580 ?v2.
+    wd:Q1608064 wdt:P577 ?v3.
+    FILTER(?v2 < ?v3)
+  }, wd:Q201358, wd:Q1608064) AS ?v1)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/The_Flintstones> ns1:endYear ""1960"" .  <http://dbpedia.org/resource/Voting_Rights_Act_of_1965> ns1:startYear ""1965"" .  SELECT DISTINCT ?endYear ?startYear WHERE {    <http://dbpedia.org/resource/The_Flintstones> <http://dbpedia.org/ontology/endYear> ?end",wd:Q201358,,FALSE,,1,,1,,,,1,,,3
+146,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q322170 (wdt:P279/wdt:P425/wdt:P3712) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Suffragette> a <http://dbpedia.org/ontology/Movement> ;     ns1:ideology ?ideology .  SELECT ?ideology WHERE {    <http://dbpedia.org/resource/Suffragette> <http://dbpedia.org/property/ideology> ?ideology  },wd:Q205204,,FALSE,,1,,,,,,1,,,2
+147,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q39018 wdt:P2521 ?v1.
+  FILTER(LANGMATCHES(LANG(?v1), ""en""))
+}","SELECT ?result WHERE {    http://www.wikidata.org/entity/Q39018 http://www.wikidata.org/prop/direct/P2521 ?result .    FILTER (?result = ""Empress"") }",empress ,,FALSE,,,,,,1,,,,,1
+148,"ASK WHERE { 
+  FILTER(NOT EXISTS { wd:Q213849 wdt:P576 ?v1. }) 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/ATI_Technologies> ns1:dissolutionYear ""?uri"" .  SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/ATI_Technologies> <http://dbpedia.org/ontology/dissolutionYear> ?uri }",false ,,FALSE,1,1,,,,,,1,,,3
+149,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1779 wdt:P1303 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1779 http://www.wikidata.org/prop/direct/P1303 ?result . },"wd:Q202027
+ wd:Q17172850
+ wd:Q8338",,FALSE,,,,,,1,,,,,1
+150,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q6711 (wdt:P451/wdt:P21) ?v1. 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Allen_Ginsberg> ns2:partner <http://dbpedia.org/resource/Peter_Orlovsky> ;  ns1:gender ""male"" .  <http://dbpedia.org/resource/Peter_Orlovsky> ns1:gender ""male"" .   SELECT ?gender WHERE { <http://dbpedia.org",wd:Q6581097,,FALSE,,,,1,,,,1,,,2
+151,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q79226802;
+    wdt:P155 wd:Q599644.
+}",SELECT ?animal WHERE {    <http://www.wikidata.org/entity/Q740762> <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q79226802> .    <http://www.wikidata.org/entity/Q740762> <http://www.wikidata.org/prop/direct/P155> ?animal .    FILTER (?animal != <http://www.wikidata.org/entity/Q,wd:Q740762,,FALSE,,1,,1,,,,,,,2
+152,"SELECT (SUM(?v1) AS ?v2) WHERE {
+  {
+    SELECT DISTINCT ?v3 WHERE {
+      ?v3 wdt:P361 wd:Q30748112;
+        wdt:P1128 ?v4.
+    }
+    ORDER BY DESC (?v4)
+    LIMIT 3
+  }
+  ?v3 p:P2139 ?v5.
+  ?v5 ps:P2139 ?v1;
+    pq:P585 ?v6.
+  FILTER(NOT EXISTS {
+    ?v3 (p:P2139/pq:P585) ?v7.
+    FILTER(?v7 > ?v6)
+  })
+}","SELECT (SUM(?revenue) AS ?totalRevenue) WHERE {
+  ?company wdt:P361 wd:Q30748112;
+    wdt:P2139 ?revenue;
+    wdt:P585 ?date.
+  FILTER(?date = ""2022-01-01T00:00:00Z""^^xsd:dateTime)
+}
+ORDER BY DESC (?revenue)
+LIMIT 3",1106581000000,0,1,,1,1,,,,,,,,2
+153,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q15174 wdt:P625 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q15174 http://www.wikidata.org/prop/direct/P625 ?result . },Point(114.054 22.535),,FALSE,,,,,,1,,,,,1
+154,"ASK WHERE {
+  ?v1 wdt:P31 wd:Q163829;
+    wdt:P176 wd:Q848490.
+}","SELECT ?item WHERE {
+  ?item wdt:P176 wd:Q848490;
+    wdt:P31 wd:Q163829.
+  FILTER(?item IN(wd:Q3440111, wd:Q7360499, wd:Q11351083, wd:Q11351077, wd:Q111530515, wd:Q21010160))
+}",true ,"wd:Q3440111
+ wd:Q7360499
+ wd:Q11351077
+ wd:Q11351083
+ wd:Q21010160
+ wd:Q111530515",1,,1,,,,,,,,,1
+155,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q230141 wdt:P103 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q230141 http://www.wikidata.org/prop/direct/P103 ?result },wd:Q33578,,FALSE,,,,,,1,,,,,1
+156,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P178 wd:Q677273;
+    wdt:P577 ?v2.
+}
+ORDER BY (?v2)
+OFFSET 1
+LIMIT 1","SELECT ?game WHERE {    ?game <http://www.wikidata.org/prop/direct/P178> <http://www.wikidata.org/entity/Q677273> .    ?game <http://www.wikidata.org/prop/direct/P577> ?date .    FILTER (?date > ""2006-11-20T00:00:00Z""^^xsd:dateTime && ?date < ""2012-04-24T00:00:00Z""^^xsd:dateTime)",wd:Q1456987,,FALSE,,1,,1,,,,,,,2
+157,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q5398426;
+    wdt:P161 wd:Q23760;
+    wdt:P2437 ?v2;
+    wdt:P580 ?v3.
+  FILTER(((YEAR(?v3)) = 1983 ) && (?v2 = 4 ))
+}","SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P2437> 4 ; <http://www.wikidata.org/prop/direct/P580> ""1983-06-15T00:00:00Z""^^xsd:dateTime ; <http://www.wikidata.org/prop/direct/P161> <http://www.wikidata.org/entity/Q23760> ; <http://www.wikidata.org/prop/direct/P31> <http://www.",wd:Q49019,,FALSE,,1,,1,,,,,,,2
+158,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q1768 wdt:P1449 ?v1.
+  FILTER(LANGMATCHES(LANG(?v1), ""en""))
+}","SELECT ?result WHERE { 
+  wd:Q1768 wdt:P1449 ?result. 
+}",Lady Ella,"Lady Ella
+la Primera dama de la canción
+la Reina del jazz",1,,1,,,,,,,,,1
+159,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q272855 wdt:P40 ?v2.
+  ?v2 wdt:P21 wd:Q6581072;
+    wdt:P106 ?v1.
+}","SELECT ?occupation WHERE {    
+  ?person wdt:P40 wd:Q272855 .    ?person wdt:P106 ?occupation .  
+}","wd:Q998550
+ wd:Q6625963
+ wd:Q9170932
+ wd:Q36180","wd:Q47064
+ wd:Q3546255",1,,,1,,,,,,,,1
+160,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q27496 (wdt:P527/wdt:P2936) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/West_Europe> a ns1:Region ;      ns2:languagesSpoken ?language .  SELECT (COUNT(DISTINCT ?language) AS ?count) WHERE {    <http://dbpedia.org/resource/West_Europe> <http://dbpedia.org/property/languagesSpoken> ?language . },58,,FALSE,,1,,,,,,1,,,2
+161,"ASK WHERE {
+  wd:Q183 (p:P2046/psn:P2046/wikibase:quantityAmount) ?v1.
+  wd:Q36 (p:P2046/psn:P2046/wikibase:quantityAmount) ?v2.
+  FILTER(?v1 > ?v2)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Germany> a ns1:Country ;     ns1:areaTotal ""357021"" .  <http://dbpedia.org/resource/Poland> a ns1:Country ;     ns1:areaTotal ""312679"" .  SELECT ?uri WHERE { ?uri a <http://dbpedia.org/ontology/Country> ; <http://dbpedia.org/ontology/areaTotal> ?n FILTER ( ?n >",true  ,,FALSE,1,,,1,,,,1,,,3
+162,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v3 wdt:P166 wd:Q37922;
+    (wdt:P26/wdt:P106) ?v1.
+}",http://www.wikidata.org/entity/Q81177 http://www.wikidata.org/prop/direct/P166 http://www.wikidata.org/entity/Q37922 .  SELECT (COUNT(DISTINCT ?occupation) AS ?count) WHERE {    ?winner wdt:P166 wd:Q37922 .    ?spouse wdt:P26 ?winner .    ?spouse wdt:P106 ?occupation .  },69,,FALSE,,1,,,,1,,1,,,3
+163,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q7889;
+    wdt:P577 ?v3.
+  wd:Q24514682 wdt:P577 ?v4.
+  FILTER((YEAR(?v3)) = (YEAR(?v4)))
+}","http://www.wikidata.org/entity/Q28127437 http://www.wikidata.org/prop/direct/P31 http://www.wikidata.org/entity/Q7889 .  SELECT (COUNT(?game) AS ?count) WHERE {    ?game <http://www.wikidata.org/prop/direct/P577> ?date .    FILTER (?date = ""2016-03-24T00:00:00Z""^^xsd:dateTime)    ?game <http",2168,,FALSE,,1,,1,,1,,,,,3
+164,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q8432;
+    wdt:P580 ?v2;
+    wdt:P582 ?v3.
+  wd:Q12542 wdt:P580 ?v4;
+    wdt:P582 ?v5.
+  FILTER(((?v2 < ?v5) && (?v3 > ?v4)) && (?v1 != wd:Q12542))
+}",SELECT ?v1 WHERE { ?v1 <http://www.wikidata.org/prop/direct/P580> ?v2 . FILTER (?v2 < 1521-01-01T00:00:00Z) },"wd:Q752688
+ wd:Q1500702",,FALSE,,1,,,,,,,,,1
+165,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q11424;
+    wdt:P136 wd:Q842256;
+    wdt:P577 ?v3.
+  wd:Q267721 wdt:P577 ?v4.
+  FILTER(((YEAR(?v3)) = (YEAR(?v4))) && (?v1 != wd:Q267721))
+}","http://www.wikidata.org/entity/Q300568 http://www.wikidata.org/prop/direct/P577 1978-06-16T00:00:00Z .  SELECT (COUNT(?uri) AS ?count) WHERE { ?uri <http://www.wikidata.org/prop/direct/P136> <http://www.wikidata.org/entity/Q842256> ; <http://www.wikidata.org/prop/direct/P577> ?date FILTER regex(?date, '^",58,,FALSE,,,,1,,1,,1,,,3
+166,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q755830.
+}","SELECT ?album WHERE {
+  ?album wdt:P31 wd:Q482994;
+    wdt:P175 wd:Q755830.
+  { wd:Q14016 wdt:P175 ?album. }
+  UNION
+  { wd:Q6819157 wdt:P175 ?album. }
+  UNION
+  { wd:Q6125801 wdt:P175 ?album. }
+}","wd:Q6125801
+ wd:Q6819157
+ wd:Q14016",-,1,,1,,,,,,,,,1
+167,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q167685 wdt:P2925 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q167685 http://www.wikidata.org/prop/direct/P2925 ?result },"wd:Q167312
+ wd:Q529711
+ wd:Q777671
+ wd:Q1135449
+ wd:Q21263223
+ wd:Q59627780
+ wd:Q11471
+ wd:Q53060",,FALSE,,,,1,,,,,,,1
+168,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q177329 wdt:P7047 ?v1.
+  ?v1 wdt:P31 wd:Q74359.
+}","SELECT ?uri WHERE {
+  ?uri wdt:P31 wd:Q74359;
+    wdt:P7047 wd:Q15007.
+}",wd:Q15007,"wd:Q177329
+ wd:Q185737
+ wd:Q219473
+ wd:Q2069844",1,,,1,,,,,,,,1
+169,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q3305213;
+    wdt:P170 wd:Q5582;
+    wdt:P571 ?v2.
+}
+ORDER BY DESC (?v2)
+LIMIT 1",SELECT ?painting WHERE { ?painting <http://www.wikidata.org/prop/direct/P170> <http://www.wikidata.org/entity/Q5582> . ?painting <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q3305213> . ?painting <http://www.wikidata.org/prop/direct/P571> ?date . FILTER (?date = (SELECT MAX(?date) WHERE { ?pain,wd:Q116896379,,FALSE,,1,,1,,,,,,,2
+170,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q81214 wdt:P580 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q81214 http://www.wikidata.org/prop/direct/P580 ?result },3600001 BCE,,FALSE,,,,,,1,,,,,1
+171,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q5086 wdt:P576 ?v2.
+  BIND(YEAR(?v2) AS ?v1)
+}","SELECT DISTINCT ?time WHERE { 
+  wd:Q5086 wdt:P576 ?time. 
+}",1989,9 November 1989,1,,1,,,,,,,,,1
+172,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q23001951 wdt:P580 ?v2.
+  BIND(YEAR(?v2) AS ?v1)
+}",SELECT ?time WHERE { http://www.wikidata.org/entity/Q23001951 http://www.wikidata.org/prop/direct/P580 ?time },2017,,FALSE,,1,,,,1,,,,,2
+173,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q6711 wdt:P570 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q6711 http://www.wikidata.org/prop/direct/P570 ?result },5 April 1997,,FALSE,,,,,,1,,,,,1
+174,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1768 wdt:P570 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1768 http://www.wikidata.org/prop/direct/P570 ?result . },15 June 1996,,FALSE,,,,,,1,,,,,1
+175,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q843 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q843 http://www.wikidata.org/prop/direct/P571 ?result },14 August 1947,,FALSE,,,,,,1,,,,,1
+176,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q43347 wdt:P570 ?v1. 
+}",SELECT DISTINCT ?result WHERE { http://www.wikidata.org/entity/Q43347 http://www.wikidata.org/prop/direct/P570 ?result },17 December 1273,,FALSE,,,,,,1,,,,,1
+177,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q265954 (wdt:P50/wdt:P3373) ?v2.
+  ?v2 wdt:P21 wd:Q6581097;
+    wdt:P570 ?v1.
+}",http://www.wikidata.org/entity/Q4124918 http://www.wikidata.org/prop/direct/P3373 http://www.wikidata.org/entity/Q42 .  SELECT ?date WHERE {    ?brother wdt:P21 wd:Q6581097 .    ?brother wdt:P3373 wd:Q42 .    ?brother wdt:P570 ?date .  },25 April 1997,,FALSE,,1,,1,,1,,1,,,4
+178,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q13979 (wdt:P170/wdt:P569) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Saturday_Night_Live> a ns1:TelevisionShow ;      ns1:creator <http://dbpedia.org/resource/Lorne_Michaels> .  <http://dbpedia.org/resource/Lorne_Michaels> a ns1:Person ;      ns1:birthDate ?date .   SELECT ?date WHERE { <http://dbpedia.org/resource/Saturday_Night_,17 November 1944,,FALSE,,,,1,,,,1,,,2
+179,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q551416 wdt:P710 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q551416 http://www.wikidata.org/prop/direct/P710 ?result },"wd:Q213595
+ wd:Q214481",,FALSE,,,,,,1,,,,,1
+180,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q19798744 wdt:P580 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q19798744 http://www.wikidata.org/prop/direct/P580 ?result },16 December 2016,,FALSE,,,,,,1,,,,,1
+181,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q815436 wdt:P1120 ?v1. 
+}",SELECT (COUNT(?result) AS ?totalCasualties) WHERE { http://www.wikidata.org/entity/Q815436 http://www.wikidata.org/prop/direct/P1120 ?result },3532,,FALSE,,,,,,1,,,,,1
+182,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q41304 wdt:P571 ?v1. 
+}",SELECT DISTINCT ?result WHERE { http://www.wikidata.org/entity/Q41304 http://www.wikidata.org/prop/direct/P571 ?result },9 November 1918,,FALSE,,,,,,1,,,,,1
+183,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q362 wdt:P582 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q362 http://www.wikidata.org/prop/direct/P582 ?result . },2 September 1945,,FALSE,,,,,,1,,,,,1
+184,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q58815001 wdt:P577 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q58815001 http://www.wikidata.org/prop/direct/P577 ?result },12 November 2021,,FALSE,,,,,,1,,,,,1
+185,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q4176 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q4176 http://www.wikidata.org/prop/direct/P571 ?result },1 January 1248,,FALSE,,,,,,1,,,,,1
+186,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q15787 wdt:P575 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q15787 http://www.wikidata.org/prop/direct/P575 ?result },1 January 1983,,FALSE,,,,,,1,,,,,1
+187,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 (wdt:P31/(wdt:P279*)) wd:Q191067;
+    wdt:P921 wd:Q6557482;
+    wdt:P577 ?v1.
+}
+ORDER BY (?v1)
+LIMIT 1","SELECT ?uri WHERE {
+  ?uri wdt:P921 wd:Q6557482;
+    wdt:P577 ?date.
+  FILTER(?date = ""2007-08-01T00:00:00Z"")
+}",1 August 2007,-,1,,1,1,,,,,,,,2
+188,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q4612 wdt:P569 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q4612 http://www.wikidata.org/prop/direct/P569 ?result . },27 December 1901,,FALSE,,,,,,1,,,,,1
+189,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q43347 wdt:P569 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q43347 http://www.wikidata.org/prop/direct/P569 ?result . },30 September 1207,,FALSE,,,,,,1,,,,,1
+190,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q37068 wdt:P580 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q37068 http://www.wikidata.org/prop/direct/P580 ?result },1 January 1800,,FALSE,,,,,,1,,,,,1
+191,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q703237 wdt:P576 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q703237 http://www.wikidata.org/prop/direct/P576 ?result },25 April 2018,,FALSE,,,,,,1,,,,,1
+192,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q800176 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q800176 http://www.wikidata.org/prop/direct/P571 ?result },1 January 1985,,FALSE,,,,,,1,,,,,1
+193,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1545259 wdt:P571 ?v1. 
+}",SELECT DISTINCT ?result WHERE { http://www.wikidata.org/entity/Q1545259 http://www.wikidata.org/prop/direct/P571 ?result },1 January 1955,,FALSE,,,,,,1,,,,,1
+194,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q35794 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q35794 http://www.wikidata.org/prop/direct/P571 ?result },1 January 1209,,FALSE,,,,,,1,,,,,1
+195,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q237 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q237 http://www.wikidata.org/prop/direct/P571 ?result },11 February 1929,,FALSE,,,,,,1,,,,,1
+196,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1771942 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1771942 <http://www.wikidata.org/prop/direct/P571> ?result },1 January 1899,,FALSE,,,,,,1,,,,,1
+197,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q551416 wdt:P276 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q551416 http://www.wikidata.org/prop/direct/P276 ?result },wd:Q523286,,FALSE,,,,,,1,,,,,1
+198,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q46577569 wdt:P495 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q46577569 http://www.wikidata.org/prop/direct/P495 ?result },wd:Q142,,FALSE,,,,,,1,,,,,1
+199,"ASK WHERE {
+  ?v1 wdt:P166 wd:Q103618;
+    wdt:P69 ?v2.
+  ?v3 wdt:P166 wd:Q103618;
+    wdt:P69 ?v2.
+  FILTER(?v1 != ?v3)
+}",SELECT ?winner WHERE {    ?winner <http://www.wikidata.org/prop/direct/P166> <http://www.wikidata.org/entity/Q103618> ;            <http://www.wikidata.org/prop/direct/P69> ?institution .    ?winner <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .    FILTER EX,true  ,,FALSE,,,,1,,,,,,,1
+200,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q20 wdt:P610 ?v1. 
+}",SELECT ?result WHERE {    <http://www.wikidata.org/entity/Q20> <http://www.wikidata.org/prop/direct/P610> ?result .    FILTER (?result = (SELECT (MAX(?result)) WHERE {      <http://www.wikidata.org/entity/Q20> <http://www.wikidata.org/prop/direct/P610> ?result .    })) },wd:Q203942,,FALSE,,1,,,,,,,,,1
+201,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q5879 (wdt:P451/wdt:P19) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Johann_Wolfgang_von_Goethe> ns1:partner ?p .  ?p ns1:birthPlace ?b .  SELECT DISTINCT ?b WHERE { <http://dbpedia.org/resource/Johann_Wolfgang_von_Goethe> <http://dbpedia.org/ontology/partner> ?p .  ?p <http://dbpedia.org/ontology/birth,wd:Q3042,,FALSE,,1,,1,,,,1,,,3
+202,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q183883 (wdt:P50/wdt:P19) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/J._D._Salinger> a ns1:Writer ;     ns1:birthPlace <http://dbpedia.org/resource/New_York_City> ;     ns1:notableWork <http://dbpedia.org/resource/The_Catcher_in_the_Rye> .  SELECT ?uri WHERE { ?uri <http://dbpedia.org/ontology/Writer> <http://dbpedia.org/resource/,wd:Q60,,FALSE,,1,,1,,,,1,,,3
+203,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q38685497 wdt:P161 ?v1.
+  wd:Q19347291 wdt:P161 ?v1.
+}","SELECT ?result WHERE {
+  { wd:Q38685497 wdt:P161 ?result. }
+  UNION
+  { wd:Q19347291 wdt:P161 ?result. }
+}",wd:Q192682,"wd:Q192682
+ wd:Q212064
+ wd:Q929985
+.....",1,,1,,,,,,,,,1
+204,"SELECT DISTINCT ?v1 WHERE {
+  BIND(IF(EXISTS {
+    wd:Q33602 wdt:P4214 ?v2.
+    wd:Q36101 wdt:P4214 ?v3.
+    FILTER(?v2 > ?v3)
+  }, wd:Q33602, wd:Q36101) AS ?v1)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Panda> a ns1:Mammal ;     ns1:maximumLifespan ?pandaMaxLifespan .   <http://dbpedia.org/resource/Koala> a ns1:Mammal ;     ns1:maximumLifespan ?koalaMaxLifespan .  SELECT ?pandaMaxLifespan ?koalaMaxLifespan WHERE {    ?panda ns,wd:Q33602,,FALSE,,1,,1,,,,1,,,3
+205,"SELECT DISTINCT ?v1 WHERE {
+  {
+    SELECT (COUNT(DISTINCT ?v2) AS ?v3) WHERE {
+      wd:Q38095 (wdt:P527+) ?v2.
+      ?v2 (wdt:P31/(wdt:P279*)) wd:Q23442.
+    }
+  }
+  {
+    SELECT (COUNT(DISTINCT ?v2) AS ?v4) WHERE {
+      wd:Q192626 (wdt:P527+) ?v2.
+      ?v2 (wdt:P31/(wdt:P279*)) wd:Q23442.
+    }
+  }
+  BIND(IF(?v4 > ?v3, wd:Q192626, wd:Q38095) AS ?v1)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Galápagos_Islands> ns1:numberOfIslands ""18"" .  <http://dbpedia.org/resource/Hawaiian_Islands> ns1:numberOfIslands ""137"" .  SELECT ?uri WHERE {    { ?uri <http://dbpedia.org/ontology/numberOfIslands> ""18"" }    UNION    { ?uri <http://dbpedia",wd:Q38095,,FALSE,,1,,1,,,,1,,,3
+206,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q117012 wdt:P135 ?v1.
+  ?v1 wdt:P31 wd:Q968159.
+}","SELECT ?movement WHERE {
+  ?movement wdt:P135 wd:Q108908;
+    wdt:P31 wd:Q968159.
+}",wd:Q108908,-,1,,,1,,,,,,,,1
+207,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q15862 wdt:P571 ?v2.
+  wd:Q2306 wdt:P571 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q15862, wd:Q2306) AS ?v1)
+}","SELECT ?q ?p WHERE {
+  wd:Q15862 wdt:P571 ?q.
+  wd:Q2306 wdt:P571 ?p.
+  FILTER(?q < ?p)
+}",wd:Q2306,-,1,,1,,,,,,,,,1
+208,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q478214 wdt:P169 ?v2.
+  ?v1 wdt:P112 ?v2;
+    (wdt:P31/(wdt:P279*)) wd:Q4830453.
+}","SELECT ?v1 WHERE { 
+  ?v1 wdt:P112 wd:Q317521. 
+}","wd:Q483959
+ wd:Q21708200
+ wd:Q28874479
+ wd:Q29043471
+ wd:Q117705742
+ wd:Q193701","wd:Q193701
+ wd:Q483959
+ wd:Q21708200
+ wd:Q28222602
+ wd:Q28874479
+ wd:Q29043471
+ wd:Q109332244
+ wd:Q117705742",1,,1,1,,,,,,,,2
+209,"ASK {
+  wd:Q183 p:P1082 ?v1, ?v2.
+  ?v1 pq:P585 ?v3;
+    ps:P1082 ?v4.
+  ?v2 pq:P585 ?v5;
+    ps:P1082 ?v6.
+  BIND((?v6 - ?v4) / ?v4 AS ?v7)
+  FILTER((((YEAR(?v3)) = 2010 ) && (NOT EXISTS {
+    wd:Q183 (p:P1082/pq:P585) ?v8.
+    FILTER(?v8 > ?v5)
+  })) && (?v7 >= ""0.01""^^xsd:decimal))
+}","SELECT ?growth WHERE {    ?growth <http://www.wikidata.org/prop/qualifier/P585> ""2010-01-01T00:00:00Z""^^xsd:dateTime ;           <http://www.wikidata.org/prop/statement/P1082> ?population1 .   ?growth <http://www.wikidata.org/prop/qualifier/P585> ""2019-09-30T00:00:00Z""^^xsd:dateTime ;           <http://www.",true  ,,FALSE,1,1,,1,,,,,,,3
+210,"SELECT ?v1 WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q11436;
+    wdt:P178 wd:Q189081.
+}","SELECT ?aircraft WHERE {
+  ?aircraft wdt:P178 wd:Q667443.
+  wd:Q189081 wdt:P178 ?aircraft.
+}","wd:Q667443
+ wd:Q667443",-,1,,1,1,,,,,,,,2
+211,"SELECT DISTINCT ?v1 WHERE {
+  { SELECT (COUNT(DISTINCT ?v2) AS ?v3) WHERE { wd:Q258 wdt:P37 ?v2. } }
+  { SELECT (COUNT(DISTINCT ?v4) AS ?v5) WHERE { wd:Q115 wdt:P37 ?v4. } }
+  BIND(IF(?v3 > ?v5, wd:Q258, wd:Q115) AS ?v1)
+}",SELECT (COUNT(?lanS) AS ?countS) (COUNT(?lanE) AS ?countE) WHERE {    http://www.wikidata.org/entity/Q258 http://www.wikidata.org/prop/direct/P37 ?lanS .    http://www.wikidata.org/entity/Q115 http://www.wikidata.org/prop/direct/P37 ?lanE .  },wd:Q258,,FALSE,,1,,,,1,,,,,2
+212,"ASK WHERE { 
+  wd:Q1067089 (wdt:P31/(wdt:P279*)) wd:Q82821. 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Throat_singing> a ns1:MusicalGenre ;      ns2:tradition ""Yes"" .   SELECT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MusicalGen",false ,,FALSE,1,1,,1,,,,1,,,4
+213,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q7245 wdt:P509 ?v1.
+  ?v1 (wdt:P279*) wd:Q12136.
+}","SELECT ?disease WHERE {
+  wd:Q7245 wdt:P509 ?cause.
+  ?cause wdt:P279 ?disease.
+}",wd:Q12152,"wd:Q188151
+ wd:Q207550",1,,1,,,,,,,,,1
+214,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q662860 wdt:P1542 ?v1.
+  ?v1 (wdt:P279*) wd:Q12136.
+}","SELECT ?disease WHERE {
+  ?disease wdt:P279 wd:Q12136;
+    wdt:P1542 wd:Q662860.
+}","wd:Q12204
+ wd:Q188605",-,1,,1,,,,,,,,,1
+215,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q68061 wdt:P136 ?v1.
+  ?v1 rdfs:label ?v2.
+  FILTER(LANGMATCHES(LANG(?v2), ""en""))
+}
+ORDER BY (STRLEN(?v2))
+LIMIT 1","SELECT ?genre WHERE { ?genre <http://www.wikidata.org/prop/direct/P136> <http://www.wikidata.org/entity/Q68061> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label . FILTER (lang(?label) = ""en"") } ORDER BY LENGTH(?label) ASC LIMIT 1",wd:Q9759,,FALSE,,1,,,,,,,,,1
+216,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q708 wdt:P2054 ?v2.
+  wd:Q677 wdt:P2054 ?v3.
+  BIND(IF(?v2 >= ?v3, wd:Q708, wd:Q677) AS ?v1)
+}","SELECT ?dl, ?di WHERE { <http://www.wikidata.org/entity/Q708> <http://www.wikidata.org/prop/direct/P2054> ?dl . <http://www.wikidata.org/entity/Q677> <http://www.wikidata.org/prop/direct/P2054> ?di . } ORDER BY ASC(?dl) LIMIT 1",wd:Q708,,FALSE,,1,,,,,,,,,1
+217,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q2945433 wdt:P607 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q2945433 http://www.wikidata.org/prop/direct/P607 ?result },wd:Q362,,FALSE,,,,,,1,,,,,1
+218,"SELECT DISTINCT ?v1 WHERE {
+  {
+    SELECT DISTINCT (COUNT(DISTINCT ?v2) AS ?v3) WHERE {
+      ?v2 wdt:P31 wd:Q27020041;
+        wdt:P3450 wd:Q155223;
+        wdt:P1346 ?v1.
+      ?v1 wdt:P31 wd:Q13393265.
+    }
+    GROUP BY ?v1
+    ORDER BY DESC (?v3)
+    LIMIT 1
+  }
+  ?v2 wdt:P31 wd:Q27020041;
+    wdt:P3450 wd:Q155223;
+    wdt:P1346 ?v1.
+  ?v1 wdt:P31 wd:Q13393265.
+}
+GROUP BY ?v1
+HAVING ((COUNT(DISTINCT ?v2)) = (MAX(?v3)))",SELECT ?team (COUNT(?season) AS ?seasonsWon) WHERE {    ?team <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q27020041> ;          <http://www.wikidata.org/prop/direct/P1346> ?season .    ?season <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q155223>,"wd:Q121783
+ wd:Q131371",,FALSE,,1,,1,,,,,,,2
+219,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q69303989 wdt:P57 ?v2.
+  ?v1 wdt:P31 wd:Q11424;
+    wdt:P57 ?v2;
+    wdt:P161 wd:Q294647.
+  FILTER(?v1 != wd:Q69303989)
+}",SELECT ?v1 WHERE { ?v1 <http://www.wikidata.org/prop/direct/P57> <http://www.wikidata.org/entity/Q314287> . ?v1 <http://www.wikidata.org/prop/direct/P57> ?v2 . ?v2 <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q11424> . ?v2 <http://www.wikidata.org/prop/direct,wd:Q32303,,FALSE,,,,1,,,,,,,1
+220,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q12516;
+    (p:P2048/psn:P2048/wikibase:quantityAmount) ?v2;
+    wdt:P17 wd:Q79.
+}
+ORDER BY DESC (?v2)
+LIMIT 1","SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P17> <http://www.wikidata.org/entity/Q79> ; <http://www.wikidata.org/prop/direct/P17> <http://www.wikidata.org/entity/Q79> . FILTER (?uri IN (http://www.wikidata.org/entity/Q1232134, http://www.wikidata.org/entity/Q1752090, http://www.wikidata.",wd:Q37200,,FALSE,,1,,1,,1,,,,,3
+221,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1867 wdt:P37 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1867 http://www.wikidata.org/prop/direct/P37 ?result },wd:Q7850,,FALSE,,,,,,1,,,,,1
+222,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q13979 wdt:P580 ?v2.
+  ?v1 wdt:P31 wd:Q5398426;
+    wdt:P580 ?v3.
+  FILTER(((YEAR(?v2)) = (YEAR(?v3))) && (?v1 != wd:Q13979))
+}","SELECT ?uri WHERE {
+  ?uri wdt:P31 wd:Q5398426;
+    wdt:P580 ?date.
+  FILTER((?date >= ""1975-01-01T00:00:00Z""^^xsd:dateTime) && (?date <= ""1975-12-31T00:00:00Z""^^xsd:dateTime))
+}","wd:Q212731
+ wd:Q196226
+ wd:Q128251
+......","wd:Q196226
+ wd:Q212731
+ wd:Q13979
+.....",1,,1,,,,,,,,,1
+223,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P361 wd:Q828282;
+    wdt:P31 ?v2.
+  FILTER(?v2 IN(wd:Q105543609, wd:Q134556))
+}","SELECT ?uri WHERE {
+  ?uri wdt:P361 wd:Q828282;
+    wdt:P31 wd:Q134556.
+}","wd:Q576798
+ wd:Q1784211
+ wd:Q2265331
+ wd:Q2713486
+ wd:Q3040253
+ wd:Q3045530
+ wd:Q9051589
+ wd:Q62063330","wd:Q576798
+ wd:Q1784211
+ wd:Q2265331
+ wd:Q2713486
+ wd:Q3040253",1,,1,,,,,,,,,1
+224,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q40415 wdt:P571 ?v2.
+  wd:Q80113 wdt:P580 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q40415, wd:Q80113) AS ?v1)
+}","SELECT ?imp ?exp WHERE {
+  wd:Q40415 wdt:P571 ?imp.
+  wd:Q80113 wdt:P580 ?exp.
+}",wd:Q40415,1 January 1860,1,,1,,,,,,,,,1
+225,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q2695156 (wdt:P551/wdt:P131) ?v1.
+  ?v1 wdt:P31 wd:Q35657.
+}","SELECT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q1408;
+    wdt:P17 wd:Q35657.
+}",wd:Q1408,-,1,,1,1,,,,,,,,2
+226,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P106 wd:Q11397897;
+    (wdt:P26/wdt:P31) wd:Q2035494;
+    wdt:P172 wd:Q2292830.
+}",http://www.wikidata.org/entity/Q180322 http://www.wikidata.org/prop/direct/P453 http://www.wikidata.org/entity/Q104737 .  SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P106> <http://www.wikidata.org/entity/Q11397897> ; <http://www.wikidata.org/prop/direct/P172> <http://www.wikidata.org/entity/Q,wd:Q180322,,FALSE,,,,1,,1,,1,,,3
+227,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q46569648 wdt:P1923 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q46569648 http://www.wikidata.org/prop/direct/P1923 ?result },"wd:Q483020
+ wd:Q15789",,FALSE,,,,,,1,,,,,1
+228,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q34433 wdt:P571 ?v2.
+  wd:Q35794 wdt:P571 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q34433, wd:Q35794) AS ?v1)
+}","SELECT ?inco ?incc WHERE {
+  wd:Q34433 wdt:P571 ?inco.
+  wd:Q35794 wdt:P571 ?incc.
+}",wd:Q34433,"inco
+incc
+1 January 1096",1,,1,,,,,,,,,1
+229,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q533822 wdt:P178 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q533822 http://www.wikidata.org/prop/direct/P178 ?result },wd:Q4558744,,FALSE,,,,,,1,,,,,1
+230,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q63246568 wdt:P161 ?v1.
+  ?v1 wdt:P21 wd:Q6581072.
+}","SELECT ?uri WHERE {
+  ?uri wdt:P161 wd:Q63246568;
+    wdt:P21 wd:Q6581072.
+}","wd:Q230710
+ wd:Q3345735
+ wd:Q65043586
+ wd:Q65468168
+ wd:Q31353",-,1,,,1,,,,,,,,1
+231,"ASK WHERE {
+  wd:Q25369 wdt:P54 ?v1.
+  wd:Q41421 wdt:P54 ?v1.
+}","SELECT ?team WHERE {
+  { wd:Q41421 wdt:P54 ?team. }
+  UNION
+  { wd:Q25369 wdt:P54 ?team. }
+}",false ,"wd:Q121783
+ wd:Q128109
+ wd:Q169165
+ wd:Q2747877
+ wd:Q3476102
+ wd:Q4412061",1,,1,,,,,,,,,1
+232,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q163310 wdt:P61 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q163310 http://www.wikidata.org/prop/direct/P61 ?result },wd:Q7251,,FALSE,,,,,,1,,,,,1
+233,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q523286 wdt:P571 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q523286 <http://www.wikidata.org/prop/direct/P571> ?result },1 January 1100,,FALSE,,,,,,1,,,,,1
+234,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q28091065 wdt:P57 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q28091065 http://www.wikidata.org/prop/direct/P57 ?result },wd:Q449163,,FALSE,,,,,,1,,,,,1
+235,"SELECT DISTINCT ?v1 WHERE {
+  { wd:Q44649835 wdt:P50 ?v1. }
+  UNION
+  { wd:Q44649835 wdt:P2093 ?v1. }
+}","SELECT ?result WHERE {
+  ?result wdt:P2093 ""Prototypical Networks for Few-shot Learning"";
+    wdt:P50 ?author.
+}",wd:Q26702597,-,1,,1,,,,,,,,,1
+236,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q479361 wdt:P112 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q479361 http://www.wikidata.org/prop/direct/P112 ?result },"wd:Q71425
+ wd:Q448400
+ wd:Q561091",,FALSE,,,,,,1,,,,,1
+237,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q27863945 wdt:P50 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q27863945 http://www.wikidata.org/prop/direct/P50 ?result },wd:Q11523472,,FALSE,,,,,,1,,,,,1
+238,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q154797 wdt:P488 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q154797 http://www.wikidata.org/prop/direct/P488 ?result . },wd:Q1019016,,FALSE,,,,,,1,,,,,1
+239,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q48817408 wdt:P161 ?v1.
+  ?v1 wdt:P569 ?v2.
+}
+ORDER BY (?v2)
+LIMIT 1",SELECT ?person WHERE {    ?person <http://www.wikidata.org/prop/direct/P161> <http://www.wikidata.org/entity/Q48817408> .    ?person <http://www.wikidata.org/prop/direct/P569> ?date .    FILTER (?date = (SELECT MIN(?date) WHERE { ?person <http://www.wikidata.org/prop/direct/P161> <http://www.wikidata.org/entity/Q,wd:Q44870529,,FALSE,,1,,1,,,,,,,2
+240,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q2357719 wdt:P123 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q2357719 http://www.wikidata.org/prop/direct/P123 ?result },wd:Q5750244,,FALSE,,,,,,1,,,,,1
+241,"SELECT DISTINCT ?v1 WHERE { 
+  ?v1 wdt:P800 wd:Q315296. 
+}","SELECT ?uri WHERE { 
+  ?uri wdt:P800 wd:Q76641, wd:Q315296. 
+}",wd:Q76641,-,1,,,1,,,,,,,,1
+242,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q181803 wdt:P162 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q181803 http://www.wikidata.org/prop/direct/P162 ?result },"wd:Q683785
+ wd:Q1631816",,FALSE,,,,,,1,,,,,1
+243,"SELECT DISTINCT ?v1 WHERE {
+  {
+    SELECT (COUNT(DISTINCT ?v2) AS ?v3) WHERE {
+      ?v2 wdt:P161 wd:Q166389;
+        wdt:P31 wd:Q11424.
+    }
+  }
+  {
+    SELECT (COUNT(DISTINCT ?v2) AS ?v4) WHERE {
+      ?v2 wdt:P161 wd:Q343616;
+        wdt:P31 wd:Q11424.
+    }
+  }
+  BIND(IF(?v3 > ?v4, wd:Q166389, wd:Q343616) AS ?v1)
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Daniel_Day-Lewis> a ns1:Actor ;     ns1:starring <http://dbpedia.org/resource/Gangs_of_New_York> ,     <http://dbpedia.org/resource/There_Will_Be_Blood> .  <http://dbpedia.org/resource/Paul_Dano> a ns1:Actor ;     ns1:starring <http://dbpedia.org/resource/Little",wd:Q343616,,FALSE,,1,,,1,,,1,,,3
+244,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q30588383 wdt:P856 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q30588383 <http://www.wikidata.org/prop/direct/P856> ?result },<https://www.npr.org/series/tiny-desk-concerts/>,,FALSE,,,,,,1,,,,,1
+245,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q2394280 wdt:P170 ?v1. 
+}",SELECT DISTINCT ?result WHERE { http://www.wikidata.org/entity/Q2394280 <http://www.wikidata.org/prop/direct/P170> ?result },wd:Q263324,,FALSE,,,,,,1,,,,,1
+246,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q2518973 wdt:P175 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q2518973 http://www.wikidata.org/prop/direct/P175 ?result },wd:Q705531,,FALSE,,,,,,1,,,,,1
+247,"SELECT DISTINCT ?v1 WHERE {
+  { wd:Q913 wdt:P25 ?v1. }
+  UNION
+  { wd:Q913 wdt:P22 ?v1. }
+}","SELECT DISTINCT ?result WHERE {
+  wd:Q913 wdt:P22 ?result;
+    wdt:P25 ?result.
+}","wd:Q2303035
+ wd:Q2263186",-,1,,1,,,,,,,,,1
+248,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q1545259 wdt:P50 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q1545259 http://www.wikidata.org/prop/direct/P50 ?result },wd:Q6711,,FALSE,,,,,,1,,,,,1
+249,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q462333 wdt:P26 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q462333 http://www.wikidata.org/prop/direct/P26 ?result . },wd:Q76483,,FALSE,,,,,,1,,,,,1
+250,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P31 wd:Q220505;
+    wdt:P571 ?v2.
+  FILTER(ISLITERAL(?v2))
+}
+ORDER BY (?v2)
+LIMIT 1",SELECT ?uri WHERE { ?uri <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q220505> . ?uri <http://www.wikidata.org/prop/direct/P571> ?date . FILTER (?date = (SELECT MIN(?date) WHERE { ?uri <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q220505> . ?uri <http://www.,wd:Q205751,,FALSE,,,,1,,,,,,,1
+251,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q1471 wdt:P2043 ?v2.
+  wd:Q1644 wdt:P2043 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q1471, wd:Q1644) AS ?v1)
+}","SELECT ?le ?ls WHERE {
+  wd:Q1644 wdt:P2043 ?le.
+  wd:Q1471 wdt:P2043 ?ls.
+}",wd:Q1644,"le                   ls
+1094.26        776.67",1,,1,,,,,,,,,1
+252,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q11168 wdt:P577 ?v2.
+  wd:Q173626 wdt:P577 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q11168, wd:Q173626) AS ?v1)
+}","SELECT ?cp ?cm WHERE {
+  wd:Q173626 wdt:P577 ?cp.
+  wd:Q11168 wdt:P577 ?cm.
+}",wd:Q173626,"cp                         cm
+22 May 1980        1 January 1985
+22 May 1980        13 September 1985
+22 May 1980        1 January 1986
+......",1,,1,,,,,,,,,1
+253,"SELECT DISTINCT ?v1 WHERE {
+  ?v1 wdt:P463 wd:Q51885404;
+    wdt:P569 ?v2.
+}
+ORDER BY DESC (?v2)
+LIMIT 1",SELECT ?member WHERE {    ?member <http://www.wikidata.org/prop/direct/P463> <http://www.wikidata.org/entity/Q51885404> .    ?member <http://www.wikidata.org/prop/direct/P569> ?date .    FILTER (?date = (SELECT MIN(?date) WHERE { ?member <http://www.wikidata.org/prop/direct/P569> ?date })) },wd:Q55287305,,FALSE,,1,,,,,,,,,1
+254,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q615 wdt:P569 ?v2.
+  wd:Q11571 wdt:P569 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q615, wd:Q11571) AS ?v1)
+}","SELECT ?number, ?number2 WHERE {    <http://www.wikidata.org/entity/Q11571> <http://www.wikidata.org/prop/direct/P569> ?number2 .    <http://www.wikidata.org/entity/Q615> <http://www.wikidata.org/prop/direct/P569> ?number .    FILTER (?number > ?number2) }",wd:Q11571,,FALSE,,1,,,,,,,,,1
+255,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q151510 wdt:P571 ?v2.
+  wd:Q156725 wdt:P571 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q151510, wd:Q156725) AS ?v1)
+}","SELECT ?number, ?number2 WHERE {    <http://www.wikidata.org/entity/Q151510> <http://www.wikidata.org/prop/direct/P571> ?number .    <http://www.wikidata.org/entity/Q156725> <http://www.wikidata.org/prop/direct/P571> ?number2 .  } ORDER BY ASC(?number) LIMIT 1",wd:Q151510,,FALSE,,1,,,,,,,,,1
+256,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q177567 wdt:P2046 ?v2.
+  wd:Q932289 wdt:P2046 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q177567, wd:Q932289) AS ?v1)
+}","SELECT ?aa ?ac WHERE {
+  wd:Q177567 wdt:P2046 ?aa.
+  wd:Q932289 wdt:P2046 ?ac.
+}",wd:Q177567,"aa                  ac
+6700000        1000000",1,,1,,,,,,,,,1
+257,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q20718 wdt:P1128 ?v2.
+  wd:Q312 wdt:P1128 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q20718, wd:Q312) AS ?v1)
+}","SELECT (MAX(?se, ?ae) AS ?maxEmployees) WHERE {    http://www.wikidata.org/entity/Q20718 http://www.wikidata.org/prop/direct/P1128 ?se .    http://www.wikidata.org/entity/Q312 http://www.wikidata.org/prop/direct/P1128 ?ae .  }",wd:Q312,,FALSE,,1,,,,1,,,,,2
+258,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q20716 wdt:P571 ?v2.
+  wd:Q41187 wdt:P571 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q20716, wd:Q41187) AS ?v1)
+}","SELECT ?company WHERE {    VALUES ?company { <http://www.wikidata.org/entity/Q20716> <http://www.wikidata.org/entity/Q41187> }    BIND(MAX(?sa, ?so) AS ?max)    FILTER(?sa = ?max || ?so = ?max)  }",wd:Q41187,,FALSE,,1,,,,,,,,,1
+259,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q615 wdt:P2048 ?v2.
+  wd:Q11571 wdt:P2048 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q615, wd:Q11571) AS ?v1)
+}","SELECT ?number, ?number2 WHERE { http://www.wikidata.org/entity/Q615 http://www.wikidata.org/prop/direct/P2048 ?number . http://www.wikidata.org/entity/Q11571 http://www.wikidata.org/prop/direct/P2048 ?number2 . }",wd:Q11571,,FALSE,,1,,,,1,,,,,2
+260,"SELECT DISTINCT ?v1 WHERE {
+  { SELECT (COUNT(DISTINCT ?v2) AS ?v3) WHERE { wd:Q41421 (p:P166/ps:P166) ?v2. } }
+  { SELECT (COUNT(DISTINCT ?v4) AS ?v5) WHERE { wd:Q25369 (p:P166/ps:P166) ?v4. } }
+  BIND(IF(?v3 > ?v5, wd:Q41421, wd:Q25369) AS ?v1)
+}","@prefix ns1: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Michael_Jordan> ns1:awards ""5"" .  <http://dbpedia.org/resource/Kobe_Bryant> ns1:awards ""4"" .   SELECT ?uri WHERE { ?uri <http://dbpedia.org/property/awards> ?awards } ORDER BY DESC(?awards) LIMIT 1",wd:Q41421,,FALSE,,1,,,,,,1,,,2
+261,"ASK WHERE {
+  wd:Q41421 (p:P2067/psn:P2067/wikibase:quantityAmount) ?v1.
+  wd:Q25369 (p:P2067/psn:P2067/wikibase:quantityAmount) ?v2.
+  BIND(IF(?v1 > ?v2, wd:Q41421, wd:Q25369) AS ?v3)
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Michael_Jordan> ns1:weight ?v1 .  <http://dbpedia.org/resource/Kobe_Bryant> ns1:weight ?v2 .  SELECT ?v1 WHERE {    <http://dbpedia.org/resource/Michael_Jordan> ns1:weight ?v1 .    <http://dbpedia.org/resource/Kobe_Bryant> ns1:weight ?v,true  ,,FALSE,1,1,,1,,,,1,,,4
+262,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q42311 wdt:P569 ?v2.
+  wd:Q9673 wdt:P569 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q42311, wd:Q9673) AS ?v1)
+}","SELECT ?bh ?bv WHERE {
+  wd:Q9673 wdt:P569 ?bh.
+  wd:Q42311 wdt:P569 ?bv.
+  FILTER(?bh > ?bv)
+}",wd:Q9673,-,1,,1,,,,,,,,,1
+263,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q1748 wdt:P1082 ?v2.
+  wd:Q727 wdt:P1082 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q1748, wd:Q727) AS ?v1)
+}","SELECT ?popc ?popa WHERE {
+  wd:Q1748 wdt:P1082 ?popc.
+  wd:Q727 wdt:P1082 ?popa.
+}",wd:Q727,"popc            popa
+644431        860124",1,,1,,,,,,,,,1
+264,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q673 wdt:P527 ?v1. 
+}",SELECT (COUNT(?part) AS ?count) WHERE { http://www.wikidata.org/entity/Q673 http://www.wikidata.org/prop/direct/P527 ?part },24,,FALSE,,,,,,1,,,,,1
+265,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  ?v1 (wdt:P31/(wdt:P279*)) wd:Q95074;
+    wdt:P106 wd:Q11397897;
+    wdt:P21 wd:Q6581072.
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri wdt:P106 wd:Q11397897;
+    wdt:P21 wd:Q6581072.
+}",73,75,1,,1,1,,,,,,,,2
+266,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q2905359 wdt:P571 ?v2.
+  wd:Q3821214 wdt:P571 ?v3.
+  BIND(IF(?v2 < ?v3, wd:Q2905359, wd:Q3821214) AS ?v1)
+}",SELECT ?incls ?incbd WHERE {    http://www.wikidata.org/entity/Q3821214 http://www.wikidata.org/prop/direct/P571 ?incls .    http://www.wikidata.org/entity/Q2905359 http://www.wikidata.org/prop/direct/P571 ?incbd .    FILTER (?incls < ?incbd) },wd:Q3821214,,FALSE,,1,,,,1,,,,,2
+267,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q6583 wdt:P2046 ?v2.
+  wd:Q208299 wdt:P2046 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q6583, wd:Q208299) AS ?v1)
+}","SELECT ?as ?aa WHERE {
+  wd:Q6583 wdt:P2046 ?as.
+  wd:Q208299 wdt:P2046 ?aa.
+}",wd:Q6583,"as                   aa
+9200000        2330000",1,,1,,,,,,,,,1
+268,"SELECT DISTINCT ?v1 WHERE {
+  wd:Q713701 wdt:P570 ?v2.
+  wd:Q1057918 wdt:P570 ?v3.
+  BIND(IF(?v2 > ?v3, wd:Q713701, wd:Q1057918) AS ?v1)
+}","SELECT ?ds ?db WHERE {
+  wd:Q713701 wdt:P570 ?ds.
+  wd:Q1057918 wdt:P570 ?db.
+}",wd:Q1057918,"ds                          db
+18 June 1996        2 May 1998",1,,1,,,,,,,,,1
+269,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q7347 wdt:P2046 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q7347 http://www.wikidata.org/prop/direct/P2046 ?result },208610,,FALSE,,,,,,1,,,,,1
+270,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q17 (wdt:P85/wdt:P86/wdt:P1559) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Kiyoshi_Hikawa> ns1:nativeName ?n .  SELECT DISTINCT ?n WHERE { <http://dbpedia.org/resource/Kiyoshi_Hikawa> <http://dbpedia.org/ontology/nativeName> ?n },林廣守,,FALSE,,1,,,,,,1,,,2
+271,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q881 (wdt:P36/wdt:P112) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Hanoi> a ns1:City ;     ns1:country <http://dbpedia.org/resource/Vietnam> ;     ns1:founder ?founder .  SELECT ?founder WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/City> ; <http://dbpedia.org/ontology/,wd:Q716945,,FALSE,,1,,1,,,,1,,,3
+272,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q7933 (wdt:P137/wdt:P1037) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Neumayer_III_Station> ns1:operator <http://dbpedia.org/resource/Alfred_Wegener_Institute> ;     ns1:manager ?uri .  SELECT ?uri WHERE { <http://dbpedia.org/resource/Neumayer_III_Station> <http://dbpedia.org/ontology/manager> ?uri ; <http://dbpedia.org/ontology/operator> <http://,wd:Q101405,,FALSE,,1,,1,,,,1,,,3
+273,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q676899 wdt:P2522 ?v1.
+  ?v1 wdt:P3450 wd:Q19317.
+}","SELECT (COUNT(?uri) AS ?count) WHERE {
+  ?uri wdt:P2522 wd:Q19317;
+    wdt:P3450 wd:Q46934.
+}",4,0,1,,,1,,,,,,,,1
+274,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q25231 (wdt:P36/wdt:P2046) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Spitsbergen> a ns1:Island ;     ns1:capital <http://dbpedia.org/resource/Longyearbyen> .  SELECT ?area WHERE { ?uri <http://dbpedia.org/ontology/capital> <http://dbpedia.org/resource/Longyearbyen> ; <http://dbpedia.org/ontology/area> ?area },242.86,,FALSE,,1,,,,,,1,,,2
+275,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE {
+  wd:Q4127 wdt:P17 ?v1.
+  ?v1 wdt:P30 wd:Q46.
+}","SELECT (COUNT(?country) AS ?count) WHERE { 
+  ?country wdt:P30 wd:Q46 . 
+}",3,29872,1,,,1,,,,,,,,1
+276,"SELECT (COUNT(DISTINCT ?v1) AS ?v2) WHERE { 
+  wd:Q151973 wdt:P26 ?v1. 
+}",SELECT ?sp WHERE { http://www.wikidata.org/entity/Q151973 http://www.wikidata.org/prop/direct/P26 ?sp },4,,FALSE,,,,,,1,,,,,1
+277,"SELECT DISTINCT ?v1 WHERE {
+  ?v2 wdt:P735 wd:Q923;
+    wdt:P734 wd:Q15840785;
+    wdt:P106 wd:Q49757;
+    wdt:P119 ?v1.
+}",SELECT ?burial WHERE {    <http://www.wikidata.org/entity/Q164047> <http://www.wikidata.org/prop/direct/P119> ?burial .    <http://www.wikidata.org/entity/Q164047> <http://www.wikidata.org/prop/direct/P106> <http://www.wikidata.org/entity/Q49757> .    <http://www.wikidata.org/entity/Q164047,wd:Q84,,FALSE,,,,1,,,,,,,1
+278,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q673223 (wdt:P84/wdt:P112) ?v1. 
+}",@prefix ns1: <http://dbpedia.org/ontology/> .  @prefix ns2: <http://dbpedia.org/property/> .  <http://dbpedia.org/resource/Elbphilharmonie> a ns1:Building ;      ns1:architecturalFirm <http://dbpedia.org/resource/HafenCity_Hamburg_GmbH> .  <http://dbpedia.org/resource/HafenCity_Hamburg_GmbH> a ns1:Organisation ;,"wd:Q2745982
+ wd:Q3174960",,FALSE,,,,,1,,,1,,,2
+279,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q15920 (wdt:P112/wdt:P19/wdt:P17) ?v1. 
+}","@prefix ns1: <http://dbpedia.org/ontology/> .  <http://dbpedia.org/resource/Metallica> a ns1:Band ;     ns1:founder <http://dbpedia.org/resource/Lars_Ulrich> ,     <http://dbpedia.org/resource/James_Hetfield> .  SELECT ?uri WHERE { ?uri <http://dbpedia.org/ontology/founder> <http://dbpedia.org/resource/Lars_Ulrich>, <http://dbpedia.org/resource/","wd:Q30
+ wd:Q35",,FALSE,,1,,1,,,,1,,,3
+280,"SELECT DISTINCT ?v1 WHERE { 
+  wd:Q506040 wdt:P495 ?v1. 
+}",SELECT ?result WHERE { http://www.wikidata.org/entity/Q506040 http://www.wikidata.org/prop/direct/P495 ?result },wd:Q408,,FALSE,,,,,,1,,,,,1
+,,,,,"104,00","52,00","142,00","42,00","71,00","5,00","79,00","3,00","62,00",,,"456,00"
+,,,,,"0,37","0,19","0,51","0,15","0,25","0,02","0,28","0,01","0,22",,,"1,63"
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,Doesn't generate ASK,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,FILTER - should we consider both massed and hallucinated?,,,,,,,,,,,,,,,
+,wrong query type,SELECT instead of ASK,,,,,,,,,,,,,,
+,wrong query pattern,"misuse of BIND, UNION, FILTER, COUNT, Prop paths etc. both missed or hallucinated",,,,,,,,,,,,,,
+,incomplete query, cut queries,,,,,,,,,,,,,,
+,namespace mistake,hallucanations with prefixes or namespaces,,,,,,,,,,,,,,
