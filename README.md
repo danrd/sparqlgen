@@ -120,4 +120,13 @@ generation and focus on improving sub-graph extraction in future work.
 The subgraph extraction process is shown in https://github.com/danrd/sparqlgen/blob/main/subgraph_extraction.png.
 
 
-
+## Citation
+Please cite the following paper:
+```
+@article{kovriguina2023sparqlgen,
+  title={SPARQLGEN: One-Shot Prompt-based Approach for SPARQL Query Generation},
+  author={Kovriguina, Liubov and Teucher, Roman and Radyush, Daniil and Mouromtsev, Dmitry},
+  booktitle={Proceedings of SEMANTICS 2023 EU: 19th International Conference on Semantic Systems, September 20-22, 2023, Leipzig, Germany},
+  year={2023}
+}
+```
